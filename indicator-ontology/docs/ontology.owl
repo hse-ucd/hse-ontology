@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://oahp.hse-data.ie/Indicators#OAHP_Indicators#"
+     xml:base="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://oahp.hse-data.ie/Indicators#OAHP_Indicators">
+        <rdfs:label>OAHP Indicators</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Definition -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Definition">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Technical description of the indicator—what it measures, how it&apos;s defined, and any assumptions or limitations in interpretation.</rdfs:comment>
+        <rdfs:label>Definition</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#DenominatorDataElement -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#DenominatorDataElement">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list.</rdfs:comment>
+        <rdfs:label>DenominatorDataElement</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#DenominatorSourceDataset -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#DenominatorSourceDataset">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Identifier, e.g. URL, for the dataset providing a denominator data element. If there are multiple denominator data elements then multiple datasets must be provided as a list.</rdfs:comment>
+        <rdfs:label>DenominatorSourceDataset</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Disaggregations -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Disaggregations">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>A list of disaggregation conditions that should be available e.g. male and female</rdfs:comment>
+        <rdfs:label>Disaggregations</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Domain -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Domain">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>The high-level category the indicator falls under (e.g. Demography).</rdfs:comment>
+        <rdfs:label>Domain</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorType"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#Subdomain"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#HighLowGuidance -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#HighLowGuidance">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Guidance on how to understand high or low values—whether they suggest good or poor outcomes.</rdfs:comment>
+        <rdfs:label>HighLowGuidance</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#IndicatorID -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#IndicatorID">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue.</rdfs:comment>
+        <rdfs:label>IndicatorID</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#IndicatorTitle -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#IndicatorTitle">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Full name of the indicator as used in reports or dashboards.</rdfs:comment>
+        <rdfs:label>IndicatorTitle</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#Definition"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorID"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#Rationale"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#IndicatorType -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#IndicatorType">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Specifies if the indicator has both a numerator and a denominator, is coverage, accumulated or qualitative type</rdfs:comment>
+        <rdfs:label>IndicatorType</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#Domain"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#Status"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#Subdomain"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#MeasurementLimitations -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#MeasurementLimitations">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Notes on limitations or uncertainty introduced by how the data are collected or calculated.</rdfs:comment>
+        <rdfs:label>MeasurementLimitations</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Methodology -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Methodology">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Summary of methods used to calculate the indicator (e.g., statistical technique, smoothing, standardisation, modelling).</rdfs:comment>
+        <rdfs:label>Methodology</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Notes -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Notes">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Any additional informal information about the dataset or indicator</rdfs:comment>
+        <rdfs:label>Notes</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#NumeratorDataElement -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#NumeratorDataElement">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list.</rdfs:comment>
+        <rdfs:label>NumeratorDataElement</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#NumeratorSourceDataset -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#NumeratorSourceDataset">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list.</rdfs:comment>
+        <rdfs:label>NumeratorSourceDataset</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Provenance -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Provenance">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Description of source of this indicator, e.g. academic papers, standards.</rdfs:comment>
+        <rdfs:label>Provenance</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#PublicHealthImportance -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#PublicHealthImportance">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Explanation of the significance of this indicator in terms of population health impact, burden of disease, or priority within health strategy.</rdfs:comment>
+        <rdfs:label>PublicHealthImportance</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Rationale -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Rationale">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators.</rdfs:comment>
+        <rdfs:label>Rationale</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#Definition"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#PublicHealthImportance"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#ReasonsForInclusionExclusion -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#ReasonsForInclusionExclusion">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Reasons for Inclusion/Exclusion</rdfs:comment>
+        <rdfs:label>ReasonsForInclusionExclusion</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#ReportFrequency -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#ReportFrequency">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Frequency of reporting period, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of reports.</rdfs:comment>
+        <rdfs:label>ReportFrequency</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#ReportStyle -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#ReportStyle">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Indicates the period to which the data applies and how that is used with reporting frequency to generate a report.</rdfs:comment>
+        <rdfs:label>ReportStyle</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Status -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Status">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>An internal prioritisation process status for the dataset or indicator</rdfs:comment>
+        <rdfs:label>Status</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorID"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#Subdomain -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#Subdomain">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>A more specific category under the domain (e.g. Population numbers).</rdfs:comment>
+        <rdfs:label>Subdomain</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#Domain"/>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://oahp.hse-data.ie/Indicators#ValidityGuidance -->
+
+
+    <owl:Class rdf:about="https://oahp.hse-data.ie/Indicators#ValidityGuidance">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:isPartOf rdf:resource="https://oahp.hse-data.ie/Indicators#OAHP_Indicators"/>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <rdfs:comment>Description of how the indicator might be influenced by other variables or biases, affecting validity.</rdfs:comment>
+        <rdfs:label>ValidityGuidance</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://oahp.hse-data.ie/Indicators#IndicatorTitle"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
