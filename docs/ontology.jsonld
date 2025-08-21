@@ -1,20 +1,82 @@
 [ {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/isPartOf",
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/source",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Definition",
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://oahp.hse-data.ie/Indicators#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@id" : "https://oahp.hse-data.ie/people#HaulaGaladima"
+  }, {
+    "@id" : "https://oahp.hse-data.ie/people#JunliLiang"
+  }, {
+    "@id" : "https://oahp.hse-data.ie/people#RobBrennan"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Ontology for modeling population health indicators based on health DCAT-AP data catalogue"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-20"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-21"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP_DataCatalogueSchemaProposal-v05.12.xlsx"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Population Health Indicator Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Population Health Indicator Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://hse-ucd.github.io/hse-ontology/#https://oahp.hse-data.ie/Indicators#"
+  }, {
+    "@id" : "https://openreview.net/pdf?id=JMWarUh56o"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://github.com/hse-ucd/hse-ontology/blob/main/phiontology.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "https://oahp.hse-data.ie/Indicators#Indicator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -23,8 +85,32 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A population health indicator that measures specific aspects of health and wellbeing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indicator"
+  } ]
+}, {
+  "@id" : "https://oahp.hse-data.ie/Indicators#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -32,15 +118,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Technical description of the indicator—what it measures, how it's defined, and any assumptions or limitations in interpretation."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Definition"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "definition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#DenominatorDataElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#denominatorDataElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -48,8 +137,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -57,15 +147,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DenominatorDataElement"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "denominator data element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#DenominatorSourceDataset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#denominatorSourceDataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -73,8 +166,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -82,15 +176,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Identifier, e.g. URL, for the dataset providing a denominator data element. If there are multiple denominator data elements then multiple datasets must be provided as a list."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DenominatorSourceDataset"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "denominator source dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Disaggregations",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#disaggregations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -98,24 +195,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A list of disaggregation conditions that should be available e.g. male and female"
+    "@value" : "A list of disaggregation conditions that should be available e.g. male and female."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Disaggregations"
+    "@value" : "disaggregations"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Domain",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#domain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -123,26 +224,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The high-level category the indicator falls under (e.g. Demography)."
+    "@value" : "A high-level category the indicator falls under -e.g. Demography-."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Domain"
+    "@value" : "domain"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorType"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#Subdomain"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#HighLowGuidance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#highLowGuidance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -150,8 +253,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -159,15 +263,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Guidance on how to understand high or low values—whether they suggest good or poor outcomes."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "HighLowGuidance"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "high-low guidance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#indicatorID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -175,24 +282,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue."
+    "@value" : "The main identifier for the Indicator, e.g. the URI -URL, web link- or other unique identifier in the context of the Catalogue.\r\n"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "IndicatorID"
+    "@value" : "indicator ID"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#indicatorTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -200,8 +311,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -209,19 +321,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Full name of the indicator as used in reports or dashboards."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#Definition"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorID"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#Rationale"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "indicator title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#indicatorType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -229,28 +340,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Specifies if the indicator has both a numerator and a denominator, is coverage, accumulated or qualitative type"
+    "@value" : "Specifies if the indicatorhas both a numerator and a denominator, is coverage, accumulated or qualitative type\r\n"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "IndicatorType"
+    "@value" : "indicator type"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#Domain"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#Status"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#Subdomain"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#MeasurementLimitations",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#measurementLimitations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -258,8 +369,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -267,15 +379,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Notes on limitations or uncertainty introduced by how the data are collected or calculated."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "MeasurementLimitations"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "measurement limitations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Methodology",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#methodology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -283,24 +398,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Summary of methods used to calculate the indicator (e.g., statistical technique, smoothing, standardisation, modelling)."
+    "@value" : "Summary of methods used to calculate the indicator -e.g., statistical technique, smoothing, standardisation, modelling-."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Methodology"
+    "@value" : "methodology"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Notes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#notes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -308,24 +427,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Any additional informal information about the dataset or indicator"
+    "@value" : "Any additional informal information about the dataset or indicator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Notes"
+    "@value" : "notes"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#NumeratorDataElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#numeratorDataElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -333,8 +456,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -342,15 +466,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "NumeratorDataElement"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "numerator data element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#NumeratorSourceDataset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#numeratorSourceDataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -358,8 +485,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -367,21 +495,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "NumeratorSourceDataset"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
-  } ]
-}, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "OAHP Indicators"
+    "@value" : "numerator source dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Provenance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#provenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -389,8 +514,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -398,15 +524,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Description of source of this indicator, e.g. academic papers, standards."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Provenance"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "provenance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#PublicHealthImportance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#publicHealthImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -414,8 +543,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -423,15 +553,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Explanation of the significance of this indicator in terms of population health impact, burden of disease, or priority within health strategy."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "PublicHealthImportance"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "public health importance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Rationale",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#rationale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -439,28 +572,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators."
+    "@value" : "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators.\r\n"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Rationale"
+    "@value" : "rationale"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#Definition"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#PublicHealthImportance"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#ReasonsForInclusionExclusion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#reasonsForInclusionExclusion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -468,24 +601,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Reasons for Inclusion/Exclusion"
+    "@value" : "Reasons for including or excluding the indicator from the catalogue."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ReasonsForInclusionExclusion"
+    "@value" : "reasons for inclusion/exclusion"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#ReportFrequency",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#reportFrequency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -493,8 +630,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -502,15 +640,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Frequency of reporting period, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of reports."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ReportFrequency"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "report frequency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#ReportStyle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#reportStyle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -518,8 +659,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -527,15 +669,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicates the period to which the data applies and how that is used with reporting frequency to generate a report."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ReportStyle"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "report style"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Status",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -543,26 +688,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An internal prioritisation process status for the dataset or indicator"
+    "@value" : "Internal prioritisation process status for the dataset or indicator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Status"
+    "@value" : "status"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorID"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorType"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#Subdomain",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#subdomain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -570,26 +717,28 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A more specific category under the domain (e.g. Population numbers)."
+    "@value" : "A more specific category under the domain -e.g. Population numbers-."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Subdomain"
+    "@value" : "subdomain"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#Domain"
-  }, {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorType"
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
-  "@id" : "https://oahp.hse-data.ie/Indicators#ValidityGuidance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://oahp.hse-data.ie/Indicators#validityGuidance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -597,8 +746,9 @@
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Rob"
   } ],
-  "http://purl.org/dc/terms/isPartOf" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#OAHP_Indicators"
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-22"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
@@ -606,10 +756,13 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Description of how the indicator might be influenced by other variables or biases, affecting validity."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ValidityGuidance"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://oahp.hse-data.ie/Indicators#Indicator"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://oahp.hse-data.ie/Indicators#IndicatorTitle"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "validity guidance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 } ]
