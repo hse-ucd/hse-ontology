@@ -3,11 +3,44 @@ This section provides details for each class and property defined by Population 
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a></li>
+  <li><a href="#http://purl.org/dc/terms/AgentClass" title="http://purl.org/dc/terms/AgentClass"> <span>Agent Class</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/FileFormat" title="http://purl.org/dc/terms/FileFormat"> <span>File Format</span> </a></li>
+  <li><a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a></li>
+  <li><a href="#http://purl.org/dc/terms/Jurisdiction" title="http://purl.org/dc/terms/Jurisdiction"> <span>Jurisdiction</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/LicenseDocument" title="http://purl.org/dc/terms/LicenseDocument"> <span>License Document</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/Location" title="http://purl.org/dc/terms/Location"> <span>Location</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/MediaType" title="http://purl.org/dc/terms/MediaType"> <span>Media Type</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/PeriodOfTime" title="http://purl.org/dc/terms/PeriodOfTime"> <span>Period of Time</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/PhysicalMedium" title="http://purl.org/dc/terms/PhysicalMedium"> <span>Physical Medium</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/SizeOrDuration" title="http://purl.org/dc/terms/SizeOrDuration"> <span>Size or Duration</span> </a></li>
  </ul>
+ <div class="entity" id="http://purl.org/dc/terms/AgentClass">
+  <h3>Agent Class<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/AgentClass</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2000/01/rdf-schema#Class" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Class">Class</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/FileFormat">
+  <h3>File Format<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/FileFormat</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/MediaType" title="http://purl.org/dc/terms/MediaType">Media Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="Indicator">
   <h3>Indicator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#Indicator</p>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#Indicator</p>
   <div class="comment">
    <span class="markdown">A population health indicator that measures specific aspects of health and wellbeing.</span>
   </div>
@@ -24,25 +57,115 @@ This section provides details for each class and property defined by Population 
     is in domain of
    </dt>
    <dd>
-    <a href="#definition" title="https://oahp.hse-data.ie/Indicators#definition">definition</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#denominatorDataElement" title="https://oahp.hse-data.ie/Indicators#denominatorDataElement">denominator data element</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#denominatorSourceDataset" title="https://oahp.hse-data.ie/Indicators#denominatorSourceDataset">denominator source dataset</a> <sup class="type-op" title="object property">op</sup>, <a href="#disaggregations" title="https://oahp.hse-data.ie/Indicators#disaggregations">disaggregations</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#domain" title="https://oahp.hse-data.ie/Indicators#domain">domain</a> <sup class="type-op" title="object property">op</sup>, <a href="#highLowGuidance" title="https://oahp.hse-data.ie/Indicators#highLowGuidance">high-low guidance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#indicatorID" title="https://oahp.hse-data.ie/Indicators#indicatorID">indicator ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#indicatorTitle" title="https://oahp.hse-data.ie/Indicators#indicatorTitle">indicator title</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#indicatorType" title="https://oahp.hse-data.ie/Indicators#indicatorType">indicator type</a> <sup class="type-op" title="object property">op</sup>, <a href="#measurementLimitations" title="https://oahp.hse-data.ie/Indicators#measurementLimitations">measurement limitations</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#methodology" title="https://oahp.hse-data.ie/Indicators#methodology">methodology</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#notes" title="https://oahp.hse-data.ie/Indicators#notes">notes</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#numeratorDataElement" title="https://oahp.hse-data.ie/Indicators#numeratorDataElement">numerator data element</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#numeratorSourceDataset" title="https://oahp.hse-data.ie/Indicators#numeratorSourceDataset">numerator source dataset</a> <sup class="type-op" title="object property">op</sup>, <a href="#provenance" title="https://oahp.hse-data.ie/Indicators#provenance">provenance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#publicHealthImportance" title="https://oahp.hse-data.ie/Indicators#publicHealthImportance">public health importance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#rationale" title="https://oahp.hse-data.ie/Indicators#rationale">rationale</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#reasonsForInclusionExclusion" title="https://oahp.hse-data.ie/Indicators#reasonsForInclusionExclusion">reasons for inclusion/exclusion</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#reportFrequency" title="https://oahp.hse-data.ie/Indicators#reportFrequency">report frequency</a> <sup class="type-op" title="object property">op</sup>, <a href="#reportStyle" title="https://oahp.hse-data.ie/Indicators#reportStyle">report style</a> <sup class="type-op" title="object property">op</sup>, <a href="#status" title="https://oahp.hse-data.ie/Indicators#status">status</a> <sup class="type-op" title="object property">op</sup>, <a href="#subdomain" title="https://oahp.hse-data.ie/Indicators#subdomain">subdomain</a> <sup class="type-op" title="object property">op</sup>, <a href="#validityGuidance" title="https://oahp.hse-data.ie/Indicators#validityGuidance">validity guidance</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#definition" title="https://hse.ie/data/ontology/phi#definition">Definition</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#denominatorDataElement" title="https://hse.ie/data/ontology/phi#denominatorDataElement">Denominator Data Element</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#denominatorSource" title="https://hse.ie/data/ontology/phi#denominatorSource">Denominator Source Dataset</a> <sup class="type-op" title="object property">op</sup>, <a href="#disaggregation" title="https://hse.ie/data/ontology/phi#disaggregation">Disaggregations</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#domain" title="https://hse.ie/data/ontology/phi#domain">Domain</a> <sup class="type-op" title="object property">op</sup>, <a href="#highLowGuidance" title="https://hse.ie/data/ontology/phi#highLowGuidance">High-Low Guidance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#identifier" title="https://hse.ie/data/ontology/phi#identifier">Indicator ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#title" title="https://hse.ie/data/ontology/phi#title">Indicator Title</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#indicatorType" title="https://hse.ie/data/ontology/phi#indicatorType">Indicator Type</a> <sup class="type-op" title="object property">op</sup>, <a href="#measurementLimitations" title="https://hse.ie/data/ontology/phi#measurementLimitations">Measurement Limitations</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#methodology" title="https://hse.ie/data/ontology/phi#methodology">Methodology</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#note" title="https://hse.ie/data/ontology/phi#note">Notes</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#numeratorDataElement" title="https://hse.ie/data/ontology/phi#numeratorDataElement">Numerator Data Element</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#numeratorSource" title="https://hse.ie/data/ontology/phi#numeratorSource">Numerator Source Dataset</a> <sup class="type-op" title="object property">op</sup>, <a href="#provenance" title="https://hse.ie/data/ontology/phi#provenance">Provenance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#importance" title="https://hse.ie/data/ontology/phi#importance">Public Health Importance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#rationale" title="https://hse.ie/data/ontology/phi#rationale">Rationale</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#historyNote" title="https://hse.ie/data/ontology/phi#historyNote">Reasons for Inclusion/Exclusion</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#accrualPeriodicity" title="https://hse.ie/data/ontology/phi#accrualPeriodicity">Report Frequency</a> <sup class="type-op" title="object property">op</sup>, <a href="#reportStyle" title="https://hse.ie/data/ontology/phi#reportStyle">Report Style</a> <sup class="type-op" title="object property">op</sup>, <a href="#status" title="https://hse.ie/data/ontology/phi#status">Status</a> <sup class="type-op" title="object property">op</sup>, <a href="#subdomain" title="https://hse.ie/data/ontology/phi#subdomain">Subdomain</a> <sup class="type-op" title="object property">op</sup>, <a href="#validityGuidance" title="https://hse.ie/data/ontology/phi#validityGuidance">Validity Guidance</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/Jurisdiction">
+  <h3>Jurisdiction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/Jurisdiction</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/LocationPeriodOrJurisdiction" target="_blank" title="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">Location, Period, or Jurisdiction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/LicenseDocument">
+  <h3>License Document<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/LicenseDocument</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/RightsStatement" target="_blank" title="http://purl.org/dc/terms/RightsStatement">Rights Statement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/Location">
+  <h3>Location<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/Location</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/LocationPeriodOrJurisdiction" target="_blank" title="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">Location, Period, or Jurisdiction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/MediaType">
+  <h3>Media Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/MediaType</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/MediaTypeOrExtent" target="_blank" title="http://purl.org/dc/terms/MediaTypeOrExtent">Media Type or Extent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/FileFormat" title="http://purl.org/dc/terms/FileFormat">File Format</a> <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/dc/terms/PhysicalMedium" title="http://purl.org/dc/terms/PhysicalMedium">Physical Medium</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/PeriodOfTime">
+  <h3>Period of Time<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/PeriodOfTime</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/LocationPeriodOrJurisdiction" target="_blank" title="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">Location, Period, or Jurisdiction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/PhysicalMedium">
+  <h3>Physical Medium<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/PhysicalMedium</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/MediaType" title="http://purl.org/dc/terms/MediaType">Media Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/SizeOrDuration">
+  <h3>Size or Duration<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/SizeOrDuration</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/MediaTypeOrExtent" target="_blank" title="http://purl.org/dc/terms/MediaTypeOrExtent">Media Type or Extent</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#denominatorSourceDataset" title="https://oahp.hse-data.ie/Indicators#denominatorSourceDataset">denominator source dataset</a></li>
-  <li><a href="#domain" title="https://oahp.hse-data.ie/Indicators#domain">domain</a></li>
-  <li><a href="#indicatorType" title="https://oahp.hse-data.ie/Indicators#indicatorType">indicator type</a></li>
-  <li><a href="#numeratorSourceDataset" title="https://oahp.hse-data.ie/Indicators#numeratorSourceDataset">numerator source dataset</a></li>
-  <li><a href="#reportFrequency" title="https://oahp.hse-data.ie/Indicators#reportFrequency">report frequency</a></li>
-  <li><a href="#reportStyle" title="https://oahp.hse-data.ie/Indicators#reportStyle">report style</a></li>
-  <li><a href="#status" title="https://oahp.hse-data.ie/Indicators#status">status</a></li>
-  <li><a href="#subdomain" title="https://oahp.hse-data.ie/Indicators#subdomain">subdomain</a></li>
+  <li><a href="#denominatorSource" title="https://hse.ie/data/ontology/phi#denominatorSource">Denominator Source Dataset</a></li>
+  <li><a href="#domain" title="https://hse.ie/data/ontology/phi#domain">Domain</a></li>
+  <li><a href="#indicatorType" title="https://hse.ie/data/ontology/phi#indicatorType">Indicator Type</a></li>
+  <li><a href="#numeratorSource" title="https://hse.ie/data/ontology/phi#numeratorSource">Numerator Source Dataset</a></li>
+  <li><a href="#accrualPeriodicity" title="https://hse.ie/data/ontology/phi#accrualPeriodicity">Report Frequency</a></li>
+  <li><a href="#reportStyle" title="https://hse.ie/data/ontology/phi#reportStyle">Report Style</a></li>
+  <li><a href="#status" title="https://hse.ie/data/ontology/phi#status">Status</a></li>
+  <li><a href="#subdomain" title="https://hse.ie/data/ontology/phi#subdomain">Subdomain</a></li>
  </ul>
- <div class="entity" id="denominatorSourceDataset">
-  <h3>denominator source dataset<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#denominatorSourceDataset</p>
+ <div class="entity" id="denominatorSource">
+  <h3>Denominator Source Dataset<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#denominatorSource</p>
   <div class="comment">
    <span class="markdown">Identifier, e.g. URL, for the dataset providing a denominator data element. If there are multiple denominator data elements then multiple datasets must be provided as a list.</span>
   </div>
@@ -60,7 +183,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -72,10 +195,10 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="domain">
-  <h3>domain<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#domain</p>
+  <h3>Domain<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#domain</p>
   <div class="comment">
-   <span class="markdown">A high-level category the indicator falls under -e.g. Demography-.</span>
+   <span class="markdown">The high-level category the indicator falls under (e.g. Demography).</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -91,7 +214,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -103,10 +226,10 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="indicatorType">
-  <h3>indicator type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#indicatorType</p>
+  <h3>Indicator Type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#indicatorType</p>
   <div class="comment">
-   <span class="markdown">Specifies if the indicatorhas both a numerator and a denominator, is coverage, accumulated or qualitative type </span>
+   <span class="markdown">Specifies if the indicator has both a numerator and a denominator, is coverage, accumulated or qualitative type</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -122,7 +245,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -133,9 +256,9 @@ This section provides details for each class and property defined by Population 
    </dl>
   </div>
  </div>
- <div class="entity" id="numeratorSourceDataset">
-  <h3>numerator source dataset<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#numeratorSourceDataset</p>
+ <div class="entity" id="numeratorSource">
+  <h3>Numerator Source Dataset<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#numeratorSource</p>
   <div class="comment">
    <span class="markdown">Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list.</span>
   </div>
@@ -153,7 +276,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -164,9 +287,9 @@ This section provides details for each class and property defined by Population 
    </dl>
   </div>
  </div>
- <div class="entity" id="reportFrequency">
-  <h3>report frequency<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#reportFrequency</p>
+ <div class="entity" id="accrualPeriodicity">
+  <h3>Report Frequency<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#accrualPeriodicity</p>
   <div class="comment">
    <span class="markdown">Frequency of reporting period, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of reports.</span>
   </div>
@@ -184,7 +307,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -196,8 +319,8 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="reportStyle">
-  <h3>report style<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#reportStyle</p>
+  <h3>Report Style<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#reportStyle</p>
   <div class="comment">
    <span class="markdown">Indicates the period to which the data applies and how that is used with reporting frequency to generate a report.</span>
   </div>
@@ -215,7 +338,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -227,10 +350,10 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="status">
-  <h3>status<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#status</p>
+  <h3>Status<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#status</p>
   <div class="comment">
-   <span class="markdown">Internal prioritisation process status for the dataset or indicator.</span>
+   <span class="markdown">An internal prioritisation process status for the dataset or indicator</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -246,7 +369,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -258,10 +381,10 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="subdomain">
-  <h3>subdomain<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#subdomain</p>
+  <h3>Subdomain<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#subdomain</p>
   <div class="comment">
-   <span class="markdown">A more specific category under the domain -e.g. Population numbers-.</span>
+   <span class="markdown">A more specific category under the domain (e.g. Population numbers).</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -277,7 +400,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -291,25 +414,25 @@ This section provides details for each class and property defined by Population 
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
-  <li><a href="#definition" title="https://oahp.hse-data.ie/Indicators#definition">definition</a></li>
-  <li><a href="#denominatorDataElement" title="https://oahp.hse-data.ie/Indicators#denominatorDataElement">denominator data element</a></li>
-  <li><a href="#disaggregations" title="https://oahp.hse-data.ie/Indicators#disaggregations">disaggregations</a></li>
-  <li><a href="#highLowGuidance" title="https://oahp.hse-data.ie/Indicators#highLowGuidance">high-low guidance</a></li>
-  <li><a href="#indicatorID" title="https://oahp.hse-data.ie/Indicators#indicatorID">indicator ID</a></li>
-  <li><a href="#indicatorTitle" title="https://oahp.hse-data.ie/Indicators#indicatorTitle">indicator title</a></li>
-  <li><a href="#measurementLimitations" title="https://oahp.hse-data.ie/Indicators#measurementLimitations">measurement limitations</a></li>
-  <li><a href="#methodology" title="https://oahp.hse-data.ie/Indicators#methodology">methodology</a></li>
-  <li><a href="#notes" title="https://oahp.hse-data.ie/Indicators#notes">notes</a></li>
-  <li><a href="#numeratorDataElement" title="https://oahp.hse-data.ie/Indicators#numeratorDataElement">numerator data element</a></li>
-  <li><a href="#provenance" title="https://oahp.hse-data.ie/Indicators#provenance">provenance</a></li>
-  <li><a href="#publicHealthImportance" title="https://oahp.hse-data.ie/Indicators#publicHealthImportance">public health importance</a></li>
-  <li><a href="#rationale" title="https://oahp.hse-data.ie/Indicators#rationale">rationale</a></li>
-  <li><a href="#reasonsForInclusionExclusion" title="https://oahp.hse-data.ie/Indicators#reasonsForInclusionExclusion">reasons for inclusion/exclusion</a></li>
-  <li><a href="#validityGuidance" title="https://oahp.hse-data.ie/Indicators#validityGuidance">validity guidance</a></li>
+  <li><a href="#definition" title="https://hse.ie/data/ontology/phi#definition">Definition</a></li>
+  <li><a href="#denominatorDataElement" title="https://hse.ie/data/ontology/phi#denominatorDataElement">Denominator Data Element</a></li>
+  <li><a href="#disaggregation" title="https://hse.ie/data/ontology/phi#disaggregation">Disaggregations</a></li>
+  <li><a href="#highLowGuidance" title="https://hse.ie/data/ontology/phi#highLowGuidance">High-Low Guidance</a></li>
+  <li><a href="#identifier" title="https://hse.ie/data/ontology/phi#identifier">Indicator ID</a></li>
+  <li><a href="#title" title="https://hse.ie/data/ontology/phi#title">Indicator Title</a></li>
+  <li><a href="#measurementLimitations" title="https://hse.ie/data/ontology/phi#measurementLimitations">Measurement Limitations</a></li>
+  <li><a href="#methodology" title="https://hse.ie/data/ontology/phi#methodology">Methodology</a></li>
+  <li><a href="#note" title="https://hse.ie/data/ontology/phi#note">Notes</a></li>
+  <li><a href="#numeratorDataElement" title="https://hse.ie/data/ontology/phi#numeratorDataElement">Numerator Data Element</a></li>
+  <li><a href="#provenance" title="https://hse.ie/data/ontology/phi#provenance">Provenance</a></li>
+  <li><a href="#importance" title="https://hse.ie/data/ontology/phi#importance">Public Health Importance</a></li>
+  <li><a href="#rationale" title="https://hse.ie/data/ontology/phi#rationale">Rationale</a></li>
+  <li><a href="#historyNote" title="https://hse.ie/data/ontology/phi#historyNote">Reasons for Inclusion/Exclusion</a></li>
+  <li><a href="#validityGuidance" title="https://hse.ie/data/ontology/phi#validityGuidance">Validity Guidance</a></li>
  </ul>
  <div class="entity" id="definition">
-  <h3>definition<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#definition</p>
+  <h3>Definition<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#definition</p>
   <div class="comment">
    <span class="markdown">Technical description of the indicator—what it measures, how it's defined, and any assumptions or limitations in interpretation.</span>
   </div>
@@ -327,7 +450,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -339,8 +462,8 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="denominatorDataElement">
-  <h3>denominator data element<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#denominatorDataElement</p>
+  <h3>Denominator Data Element<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#denominatorDataElement</p>
   <div class="comment">
    <span class="markdown">The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list.</span>
   </div>
@@ -358,7 +481,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -369,11 +492,11 @@ This section provides details for each class and property defined by Population 
    </dl>
   </div>
  </div>
- <div class="entity" id="disaggregations">
-  <h3>disaggregations<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#disaggregations</p>
+ <div class="entity" id="disaggregation">
+  <h3>Disaggregations<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#disaggregation</p>
   <div class="comment">
-   <span class="markdown">A list of disaggregation conditions that should be available e.g. male and female.</span>
+   <span class="markdown">A list of disaggregation conditions that should be available e.g. male and female</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -389,7 +512,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -401,8 +524,8 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="highLowGuidance">
-  <h3>high-low guidance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#highLowGuidance</p>
+  <h3>High-Low Guidance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#highLowGuidance</p>
   <div class="comment">
    <span class="markdown">Guidance on how to understand high or low values—whether they suggest good or poor outcomes.</span>
   </div>
@@ -420,7 +543,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -431,11 +554,11 @@ This section provides details for each class and property defined by Population 
    </dl>
   </div>
  </div>
- <div class="entity" id="indicatorID">
-  <h3>indicator ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#indicatorID</p>
+ <div class="entity" id="identifier">
+  <h3>Indicator ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#identifier</p>
   <div class="comment">
-   <span class="markdown">The main identifier for the Indicator, e.g. the URI -URL, web link- or other unique identifier in the context of the Catalogue. </span>
+   <span class="markdown">The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -451,7 +574,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -462,9 +585,9 @@ This section provides details for each class and property defined by Population 
    </dl>
   </div>
  </div>
- <div class="entity" id="indicatorTitle">
-  <h3>indicator title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#indicatorTitle</p>
+ <div class="entity" id="title">
+  <h3>Indicator Title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#title</p>
   <div class="comment">
    <span class="markdown">Full name of the indicator as used in reports or dashboards.</span>
   </div>
@@ -482,7 +605,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -494,8 +617,8 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="measurementLimitations">
-  <h3>measurement limitations<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#measurementLimitations</p>
+  <h3>Measurement Limitations<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#measurementLimitations</p>
   <div class="comment">
    <span class="markdown">Notes on limitations or uncertainty introduced by how the data are collected or calculated.</span>
   </div>
@@ -513,7 +636,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -525,10 +648,10 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="methodology">
-  <h3>methodology<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#methodology</p>
+  <h3>Methodology<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#methodology</p>
   <div class="comment">
-   <span class="markdown">Summary of methods used to calculate the indicator -e.g., statistical technique, smoothing, standardisation, modelling-.</span>
+   <span class="markdown">Summary of methods used to calculate the indicator (e.,g statistical technique, smoothing, standardisation, modelling).</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -544,7 +667,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -555,11 +678,11 @@ This section provides details for each class and property defined by Population 
    </dl>
   </div>
  </div>
- <div class="entity" id="notes">
-  <h3>notes<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#notes</p>
+ <div class="entity" id="note">
+  <h3>Notes<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#note</p>
   <div class="comment">
-   <span class="markdown">Any additional informal information about the dataset or indicator.</span>
+   <span class="markdown">Any additional informal information about the dataset or indicator</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -575,7 +698,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -587,8 +710,8 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="numeratorDataElement">
-  <h3>numerator data element<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#numeratorDataElement</p>
+  <h3>Numerator Data Element<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#numeratorDataElement</p>
   <div class="comment">
    <span class="markdown">The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list.</span>
   </div>
@@ -606,7 +729,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -618,8 +741,8 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="provenance">
-  <h3>provenance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#provenance</p>
+  <h3>Provenance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#provenance</p>
   <div class="comment">
    <span class="markdown">Description of source of this indicator, e.g. academic papers, standards.</span>
   </div>
@@ -637,7 +760,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -648,9 +771,9 @@ This section provides details for each class and property defined by Population 
    </dl>
   </div>
  </div>
- <div class="entity" id="publicHealthImportance">
-  <h3>public health importance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#publicHealthImportance</p>
+ <div class="entity" id="importance">
+  <h3>Public Health Importance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#importance</p>
   <div class="comment">
    <span class="markdown">Explanation of the significance of this indicator in terms of population health impact, burden of disease, or priority within health strategy.</span>
   </div>
@@ -668,7 +791,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -680,10 +803,10 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="rationale">
-  <h3>rationale<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#rationale</p>
+  <h3>Rationale<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#rationale</p>
   <div class="comment">
-   <span class="markdown">A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators. </span>
+   <span class="markdown">A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -699,7 +822,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -710,11 +833,11 @@ This section provides details for each class and property defined by Population 
    </dl>
   </div>
  </div>
- <div class="entity" id="reasonsForInclusionExclusion">
-  <h3>reasons for inclusion/exclusion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#reasonsForInclusionExclusion</p>
+ <div class="entity" id="historyNote">
+  <h3>Reasons for Inclusion/Exclusion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#historyNote</p>
   <div class="comment">
-   <span class="markdown">Reasons for including or excluding the indicator from the catalogue.</span>
+   <span class="markdown">Reasons for Inclusion or Exclusion</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -730,7 +853,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -742,8 +865,8 @@ This section provides details for each class and property defined by Population 
   </div>
  </div>
  <div class="entity" id="validityGuidance">
-  <h3>validity guidance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://oahp.hse-data.ie/Indicators#validityGuidance</p>
+  <h3>Validity Guidance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phi#validityGuidance</p>
   <div class="comment">
    <span class="markdown">Description of how the indicator might be influenced by other variables or biases, affecting validity.</span>
   </div>
@@ -761,7 +884,7 @@ This section provides details for each class and property defined by Population 
      has domain
     </dt>
     <dd>
-     <a href="#Indicator" title="https://oahp.hse-data.ie/Indicators#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Indicator" title="https://hse.ie/data/ontology/phi#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
