@@ -16,8 +16,7 @@
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-20</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-21</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
-        <terms:title>Population Health Indicator Ontology</terms:title>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project.</rdfs:comment>
         <rdfs:label>Population Health Indicator Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://openreview.net/pdf?id=JMWarUh56o"/>
@@ -94,13 +93,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/title -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -132,19 +124,33 @@
     
 
 
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accrualPeriodicity"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
     <!-- https://hse.ie/data/ontology/phi#accrualPeriodicity -->
 
 
     <owl:ObjectProperty rdf:about="https://hse.ie/data/ontology/phi#accrualPeriodicity">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/accrualPeriodicity"/>
         <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
-        <rdfs:comment>Frequency of reporting period, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of reports.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
+        <rdfs:comment>Frequency of indicator update in report, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of indicator reports.Note that datasets have their own -Frequency of data updates- field to state how often they are updated.</rdfs:comment>
         <rdfs:label>Report Frequency</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/accrualPeriodicity"/>
     </owl:ObjectProperty>
     
 
@@ -157,8 +163,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Identifier, e.g. URL, for the dataset providing a denominator data element. If there are multiple denominator data elements then multiple datasets must be provided as a list.</rdfs:comment>
         <rdfs:label>Denominator Source Dataset</rdfs:label>
     </owl:ObjectProperty>
@@ -173,8 +179,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>The high-level category the indicator falls under (e.g. Demography).</rdfs:comment>
         <rdfs:label>Domain</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://healthdcat-ap.github.io/#DatasethealthTheme"/>
@@ -190,8 +196,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Specifies if the indicator has both a numerator and a denominator, is coverage, accumulated or qualitative type</rdfs:comment>
         <rdfs:label>Indicator Type</rdfs:label>
     </owl:ObjectProperty>
@@ -206,26 +212,20 @@
         <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list.</rdfs:comment>
         <rdfs:label>Numerator Source Dataset</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://hse.ie/data/ontology/phi#reportStyle -->
+    <!-- https://hse.ie/data/ontology/phi#sameAs -->
 
 
-    <owl:ObjectProperty rdf:about="https://hse.ie/data/ontology/phi#reportStyle">
+    <owl:ObjectProperty rdf:about="https://hse.ie/data/ontology/phi#sameAs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
         <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
-        <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
-        <rdfs:comment>Indicates the period to which the data applies and how that is used with reporting frequency to generate a report.</rdfs:comment>
-        <rdfs:label>Report Style</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -238,10 +238,11 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>An internal prioritisation process status for the dataset or indicator</rdfs:comment>
         <rdfs:label>Status</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://hse.ie/data/ontology/phi#StatusCodes"/>
     </owl:ObjectProperty>
     
 
@@ -254,8 +255,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>A more specific category under the domain (e.g. Population numbers).</rdfs:comment>
         <rdfs:label>Subdomain</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://healthdcat-ap.github.io/#DatasethealthTheme"/>
@@ -275,19 +276,61 @@
     
 
 
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
     <!-- https://hse.ie/data/ontology/phi#definition -->
 
 
     <owl:DatatypeProperty rdf:about="https://hse.ie/data/ontology/phi#definition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
         <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Technical description of the indicator—what it measures, how it&apos;s defined, and any assumptions or limitations in interpretation.</rdfs:comment>
         <rdfs:label>Definition</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
     </owl:DatatypeProperty>
     
 
@@ -300,8 +343,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list.</rdfs:comment>
         <rdfs:label>Denominator Data Element</rdfs:label>
     </owl:DatatypeProperty>
@@ -316,8 +359,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>A list of disaggregation conditions that should be available e.g. male and female</rdfs:comment>
         <rdfs:label>Disaggregations</rdfs:label>
     </owl:DatatypeProperty>
@@ -332,8 +375,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Guidance on how to understand high or low values—whether they suggest good or poor outcomes.</rdfs:comment>
         <rdfs:label>High-Low Guidance</rdfs:label>
     </owl:DatatypeProperty>
@@ -344,15 +387,15 @@
 
 
     <owl:DatatypeProperty rdf:about="https://hse.ie/data/ontology/phi#historyNote">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#historyNote"/>
         <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Reasons for Inclusion or Exclusion</rdfs:comment>
         <rdfs:label>Reasons for Inclusion/Exclusion</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/2004/02/skos/core#historyNote"/>
     </owl:DatatypeProperty>
     
 
@@ -361,31 +404,15 @@
 
 
     <owl:DatatypeProperty rdf:about="https://hse.ie/data/ontology/phi#identifier">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
         <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue.</rdfs:comment>
         <rdfs:label>Indicator ID</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/identifier"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://hse.ie/data/ontology/phi#importance -->
-
-
-    <owl:DatatypeProperty rdf:about="https://hse.ie/data/ontology/phi#importance">
-        <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
-        <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
-        <rdfs:comment>Explanation of the significance of this indicator in terms of population health impact, burden of disease, or priority within health strategy.</rdfs:comment>
-        <rdfs:label>Public Health Importance</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -398,8 +425,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Notes on limitations or uncertainty introduced by how the data are collected or calculated.</rdfs:comment>
         <rdfs:label>Measurement Limitations</rdfs:label>
     </owl:DatatypeProperty>
@@ -414,8 +441,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Summary of methods used to calculate the indicator (e.,g statistical technique, smoothing, standardisation, modelling).</rdfs:comment>
         <rdfs:label>Methodology</rdfs:label>
     </owl:DatatypeProperty>
@@ -426,15 +453,15 @@
 
 
     <owl:DatatypeProperty rdf:about="https://hse.ie/data/ontology/phi#note">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
         <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Any additional informal information about the dataset or indicator</rdfs:comment>
         <rdfs:label>Notes</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
     </owl:DatatypeProperty>
     
 
@@ -447,8 +474,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list.</rdfs:comment>
         <rdfs:label>Numerator Data Element</rdfs:label>
     </owl:DatatypeProperty>
@@ -459,15 +486,15 @@
 
 
     <owl:DatatypeProperty rdf:about="https://hse.ie/data/ontology/phi#provenance">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/provenance"/>
         <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
-        <rdfs:comment>Description of source of this indicator, e.g. academic papers, standards.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
+        <rdfs:comment>Provenance is information about entities, activities, and people involved in producing an indicator, which can be used to form assessments about its quality, reliability or trustworthiness. For example a description of the source of this indicator, e.g. academic papers or standards, any calculations or adjustments performed on the raw data and any organisations involved in producing or transforming the data.</rdfs:comment>
         <rdfs:label>Provenance</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/provenance"/>
     </owl:DatatypeProperty>
     
 
@@ -480,10 +507,19 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators.</rdfs:comment>
         <rdfs:label>Rationale</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://hse.ie/data/ontology/phi#sameAs -->
+
+
+    <owl:DatatypeProperty rdf:about="https://hse.ie/data/ontology/phi#sameAs">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -492,15 +528,15 @@
 
 
     <owl:DatatypeProperty rdf:about="https://hse.ie/data/ontology/phi#title">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
         <rdfs:domain rdf:resource="https://hse.ie/data/ontology/phi#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Full name of the indicator as used in reports or dashboards.</rdfs:comment>
         <rdfs:label>Indicator Title</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/title"/>
     </owl:DatatypeProperty>
     
 
@@ -513,8 +549,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>Description of how the indicator might be influenced by other variables or biases, affecting validity.</rdfs:comment>
         <rdfs:label>Validity Guidance</rdfs:label>
     </owl:DatatypeProperty>
@@ -553,11 +589,52 @@
     <owl:Class rdf:about="https://hse.ie/data/ontology/phi#Indicator">
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
         <terms:creator>Rob</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-22</terms:modified>
-        <terms:source>OAHP Data Catalogue Schema Proposal v05.12</terms:source>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <rdfs:comment>A population health indicator that measures specific aspects of health and wellbeing.</rdfs:comment>
         <rdfs:label>Indicator</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://hse.ie/data/ontology/phi# -->
+
+
+    <owl:NamedIndividual rdf:about="https://hse.ie/data/ontology/phi#">
+        <terms:title>Population Health Indicator Ontology</terms:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://hse.ie/data/ontology/phi#sameAs">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-18</terms:created>
+        <terms:creator>Rob</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-29</terms:modified>
+        <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
+        <rdfs:comment>A list of alterative identifiers for this indicator from other data publishers or coding schemes, e.g. CSO statistic identifier URL</rdfs:comment>
+        <rdfs:label>Other Identifiers</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

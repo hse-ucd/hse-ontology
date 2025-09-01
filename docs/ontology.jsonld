@@ -1,4 +1,7 @@
 [ {
+  "@id" : "http://purl.org/dc/terms/accrualPeriodicity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -11,6 +14,9 @@
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/issued",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -20,23 +26,38 @@
   "@id" : "http://purl.org/dc/terms/modified",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/provenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/source",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
+  "@id" : "http://www.w3.org/2002/07/owl#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#historyNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://www.w3.org/ns/dcat#Dataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://hse.ie/data/ontology/phi#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Haula Galadima"
   }, {
@@ -59,7 +80,7 @@
     "@value" : "2025-08-21"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@value" : "Population Health Indicator Ontology"
@@ -91,10 +112,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A population health indicator that measures specific aspects of health and wellbeing."
@@ -114,13 +135,13 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Frequency of reporting period, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of reports."
+    "@value" : "Frequency of indicator update in report, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of indicator reports.Note that datasets have their own -Frequency of data updates- field to state how often they are updated."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://hse.ie/data/ontology/phi#Indicator"
@@ -131,7 +152,7 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/accrualPeriodicity"
   } ]
 }, {
@@ -146,10 +167,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Technical description of the indicator—what it measures, how it's defined, and any assumptions or limitations in interpretation."
@@ -163,7 +184,7 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#definition"
   } ]
 }, {
@@ -178,10 +199,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list."
@@ -207,10 +228,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Identifier, e.g. URL, for the dataset providing a denominator data element. If there are multiple denominator data elements then multiple datasets must be provided as a list."
@@ -236,10 +257,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A list of disaggregation conditions that should be available e.g. male and female"
@@ -265,10 +286,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The high-level category the indicator falls under (e.g. Demography)."
@@ -297,10 +318,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Guidance on how to understand high or low values—whether they suggest good or poor outcomes."
@@ -326,10 +347,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Reasons for Inclusion or Exclusion"
@@ -343,7 +364,7 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#historyNote"
   } ]
 }, {
@@ -358,10 +379,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue."
@@ -375,37 +396,8 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/identifier"
-  } ]
-}, {
-  "@id" : "https://hse.ie/data/ontology/phi#importance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-18"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Rob"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
-  } ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Explanation of the significance of this indicator in terms of population health impact, burden of disease, or priority within health strategy."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://hse.ie/data/ontology/phi#Indicator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Public Health Importance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://hse.ie/data/ontology/phi#indicatorType",
@@ -419,10 +411,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Specifies if the indicator has both a numerator and a denominator, is coverage, accumulated or qualitative type"
@@ -448,10 +440,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Notes on limitations or uncertainty introduced by how the data are collected or calculated."
@@ -477,10 +469,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Summary of methods used to calculate the indicator (e.,g statistical technique, smoothing, standardisation, modelling)."
@@ -506,10 +498,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Any additional informal information about the dataset or indicator"
@@ -523,7 +515,7 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#note"
   } ]
 }, {
@@ -538,10 +530,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list."
@@ -567,10 +559,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list."
@@ -596,13 +588,13 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Description of source of this indicator, e.g. academic papers, standards."
+    "@value" : "Provenance is information about entities, activities, and people involved in producing an indicator, which can be used to form assessments about its quality, reliability or trustworthiness. For example a description of the source of this indicator, e.g. academic papers or standards, any calculations or adjustments performed on the raw data and any organisations involved in producing or transforming the data."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://hse.ie/data/ontology/phi#Indicator"
@@ -613,7 +605,7 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/provenance"
   } ]
 }, {
@@ -628,10 +620,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators."
@@ -646,8 +638,8 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://hse.ie/data/ontology/phi#reportStyle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://hse.ie/data/ontology/phi#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-08-18"
@@ -657,22 +649,25 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Indicates the period to which the data applies and how that is used with reporting frequency to generate a report."
+    "@value" : "A list of alterative identifiers for this indicator from other data publishers or coding schemes, e.g. CSO statistic identifier URL"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://hse.ie/data/ontology/phi#Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Report Style"
+    "@value" : "Other Identifiers"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#sameAs"
   } ]
 }, {
   "@id" : "https://hse.ie/data/ontology/phi#status",
@@ -686,10 +681,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An internal prioritisation process status for the dataset or indicator"
@@ -702,6 +697,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://hse.ie/data/ontology/phi#StatusCodes"
   } ]
 }, {
   "@id" : "https://hse.ie/data/ontology/phi#subdomain",
@@ -715,10 +713,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A more specific category under the domain (e.g. Population numbers)."
@@ -747,10 +745,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Full name of the indicator as used in reports or dashboards."
@@ -764,7 +762,7 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/title"
   } ]
 }, {
@@ -779,10 +777,10 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-08-22"
+    "@value" : "2025-08-29"
   } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@value" : "OAHP Data Catalogue Schema Proposal v05.12"
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Description of how the indicator might be influenced by other variables or biases, affecting validity."

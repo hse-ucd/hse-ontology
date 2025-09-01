@@ -15,8 +15,7 @@
                                      <http://purl.org/dc/terms/issued> "2025-08-20"^^xsd:date ;
                                      <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                      <http://purl.org/dc/terms/modified> "2025-08-21"^^xsd:date ;
-                                     <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
-                                     <http://purl.org/dc/terms/title> "Population Health Indicator Ontology" ;
+                                     <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                                      rdfs:comment "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project." ;
                                      rdfs:label "Population Health Indicator Ontology" ;
                                      rdfs:seeAlso <https://openreview.net/pdf?id=JMWarUh56o> ;
@@ -58,10 +57,6 @@
 <http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
-
-
 #################################################################
 #    Datatypes
 #################################################################
@@ -74,17 +69,25 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://purl.org/dc/terms/accrualPeriodicity
+<http://purl.org/dc/terms/accrualPeriodicity> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:ObjectProperty .
+
+
 ###  https://hse.ie/data/ontology/phi#accrualPeriodicity
 :accrualPeriodicity rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://purl.org/dc/terms/accrualPeriodicity> ;
                     rdfs:domain :Indicator ;
                     rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
                     <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                     <http://purl.org/dc/terms/creator> "Rob" ;
-                    <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                    <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
-                    rdfs:comment "Frequency of reporting period, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of reports." ;
-                    rdfs:label "Report Frequency" ;
-                    rdfs:seeAlso <http://purl.org/dc/terms/accrualPeriodicity> .
+                    <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                    <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
+                    rdfs:comment "Frequency of indicator update in report, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of indicator reports.Note that datasets have their own -Frequency of data updates- field to state how often they are updated." ;
+                    rdfs:label "Report Frequency" .
 
 
 ###  https://hse.ie/data/ontology/phi#denominatorSource
@@ -93,8 +96,8 @@ xsd:date rdf:type rdfs:Datatype .
                    rdfs:range <http://www.w3.org/ns/dcat#Dataset> ;
                    <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                    <http://purl.org/dc/terms/creator> "Rob" ;
-                   <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                   <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+                   <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                   <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                    rdfs:comment "Identifier, e.g. URL, for the dataset providing a denominator data element. If there are multiple denominator data elements then multiple datasets must be provided as a list." ;
                    rdfs:label "Denominator Source Dataset" .
 
@@ -105,8 +108,8 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
         <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
         <http://purl.org/dc/terms/creator> "Rob" ;
-        <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+        <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
         rdfs:comment "The high-level category the indicator falls under (e.g. Demography)." ;
         rdfs:label "Domain" ;
         rdfs:seeAlso <https://healthdcat-ap.github.io/#DatasethealthTheme> .
@@ -118,8 +121,8 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
                <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                <http://purl.org/dc/terms/creator> "Rob" ;
-               <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-               <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+               <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+               <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                rdfs:comment "Specifies if the indicator has both a numerator and a denominator, is coverage, accumulated or qualitative type" ;
                rdfs:label "Indicator Type" .
 
@@ -130,22 +133,16 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:range <http://www.w3.org/ns/dcat#Dataset> ;
                  <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                  <http://purl.org/dc/terms/creator> "Rob" ;
-                 <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                 <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+                 <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                 <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                  rdfs:comment "Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list." ;
                  rdfs:label "Numerator Source Dataset" .
 
 
-###  https://hse.ie/data/ontology/phi#reportStyle
-:reportStyle rdf:type owl:ObjectProperty ;
-             rdfs:domain :Indicator ;
-             rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-             <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
-             <http://purl.org/dc/terms/creator> "Rob" ;
-             <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-             <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
-             rdfs:comment "Indicates the period to which the data applies and how that is used with reporting frequency to generate a report." ;
-             rdfs:label "Report Style" .
+###  https://hse.ie/data/ontology/phi#sameAs
+:sameAs rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:sameAs ;
+        rdfs:domain :Indicator .
 
 
 ###  https://hse.ie/data/ontology/phi#status
@@ -154,10 +151,11 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
         <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
         <http://purl.org/dc/terms/creator> "Rob" ;
-        <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+        <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
         rdfs:comment "An internal prioritisation process status for the dataset or indicator" ;
-        rdfs:label "Status" .
+        rdfs:label "Status" ;
+        rdfs:seeAlso :StatusCodes .
 
 
 ###  https://hse.ie/data/ontology/phi#subdomain
@@ -166,8 +164,8 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
            <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
            <http://purl.org/dc/terms/creator> "Rob" ;
-           <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-           <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+           <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+           <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
            rdfs:comment "A more specific category under the domain (e.g. Population numbers)." ;
            rdfs:label "Subdomain" ;
            rdfs:seeAlso <https://healthdcat-ap.github.io/#DatasethealthTheme> .
@@ -177,17 +175,41 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/provenance
+<http://purl.org/dc/terms/provenance> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:DatatypeProperty .
+
+
 ###  https://hse.ie/data/ontology/phi#definition
 :definition rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#definition> ;
             rdfs:domain :Indicator ;
             rdfs:range xsd:string ;
             <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
             <http://purl.org/dc/terms/creator> "Rob" ;
-            <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-            <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+            <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+            <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
             rdfs:comment "Technical description of the indicator—what it measures, how it's defined, and any assumptions or limitations in interpretation." ;
-            rdfs:label "Definition" ;
-            rdfs:seeAlso <http://www.w3.org/2004/02/skos/core#definition> .
+            rdfs:label "Definition" .
 
 
 ###  https://hse.ie/data/ontology/phi#denominatorDataElement
@@ -196,8 +218,8 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:range xsd:string ;
                         <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                         <http://purl.org/dc/terms/creator> "Rob" ;
-                        <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+                        <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                         rdfs:comment "The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list." ;
                         rdfs:label "Denominator Data Element" .
 
@@ -208,8 +230,8 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:range xsd:string ;
                 <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                 <http://purl.org/dc/terms/creator> "Rob" ;
-                <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+                <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                 rdfs:comment "A list of disaggregation conditions that should be available e.g. male and female" ;
                 rdfs:label "Disaggregations" .
 
@@ -220,48 +242,36 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:range xsd:string ;
                  <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                  <http://purl.org/dc/terms/creator> "Rob" ;
-                 <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                 <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+                 <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                 <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                  rdfs:comment "Guidance on how to understand high or low values—whether they suggest good or poor outcomes." ;
                  rdfs:label "High-Low Guidance" .
 
 
 ###  https://hse.ie/data/ontology/phi#historyNote
 :historyNote rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#historyNote> ;
              rdfs:domain :Indicator ;
              rdfs:range xsd:string ;
              <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
              <http://purl.org/dc/terms/creator> "Rob" ;
-             <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-             <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+             <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+             <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
              rdfs:comment "Reasons for Inclusion or Exclusion" ;
-             rdfs:label "Reasons for Inclusion/Exclusion" ;
-             rdfs:seeAlso <http://www.w3.org/2004/02/skos/core#historyNote> .
+             rdfs:label "Reasons for Inclusion/Exclusion" .
 
 
 ###  https://hse.ie/data/ontology/phi#identifier
 :identifier rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> ;
             rdfs:domain :Indicator ;
             rdfs:range xsd:anyURI ;
             <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
             <http://purl.org/dc/terms/creator> "Rob" ;
-            <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-            <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+            <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+            <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
             rdfs:comment "The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue." ;
-            rdfs:label "Indicator ID" ;
-            rdfs:seeAlso <http://purl.org/dc/terms/identifier> .
-
-
-###  https://hse.ie/data/ontology/phi#importance
-:importance rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Indicator ;
-            rdfs:range xsd:string ;
-            <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
-            <http://purl.org/dc/terms/creator> "Rob" ;
-            <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-            <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
-            rdfs:comment "Explanation of the significance of this indicator in terms of population health impact, burden of disease, or priority within health strategy." ;
-            rdfs:label "Public Health Importance" .
+            rdfs:label "Indicator ID" .
 
 
 ###  https://hse.ie/data/ontology/phi#measurementLimitations
@@ -270,8 +280,8 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:range xsd:string ;
                         <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                         <http://purl.org/dc/terms/creator> "Rob" ;
-                        <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+                        <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                         rdfs:comment "Notes on limitations or uncertainty introduced by how the data are collected or calculated." ;
                         rdfs:label "Measurement Limitations" .
 
@@ -282,23 +292,23 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:range xsd:string ;
              <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
              <http://purl.org/dc/terms/creator> "Rob" ;
-             <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-             <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+             <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+             <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
              rdfs:comment "Summary of methods used to calculate the indicator (e.,g statistical technique, smoothing, standardisation, modelling)." ;
              rdfs:label "Methodology" .
 
 
 ###  https://hse.ie/data/ontology/phi#note
 :note rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> ;
       rdfs:domain :Indicator ;
       rdfs:range xsd:string ;
       <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
       <http://purl.org/dc/terms/creator> "Rob" ;
-      <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-      <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+      <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+      <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
       rdfs:comment "Any additional informal information about the dataset or indicator" ;
-      rdfs:label "Notes" ;
-      rdfs:seeAlso <http://www.w3.org/2004/02/skos/core#note> .
+      rdfs:label "Notes" .
 
 
 ###  https://hse.ie/data/ontology/phi#numeratorDataElement
@@ -307,23 +317,23 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:range xsd:string ;
                       <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                       <http://purl.org/dc/terms/creator> "Rob" ;
-                      <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                      <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+                      <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                      <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                       rdfs:comment "The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list." ;
                       rdfs:label "Numerator Data Element" .
 
 
 ###  https://hse.ie/data/ontology/phi#provenance
 :provenance rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf <http://purl.org/dc/terms/provenance> ;
             rdfs:domain :Indicator ;
             rdfs:range xsd:string ;
             <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
             <http://purl.org/dc/terms/creator> "Rob" ;
-            <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-            <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
-            rdfs:comment "Description of source of this indicator, e.g. academic papers, standards." ;
-            rdfs:label "Provenance" ;
-            rdfs:seeAlso <http://purl.org/dc/terms/provenance> .
+            <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+            <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
+            rdfs:comment "Provenance is information about entities, activities, and people involved in producing an indicator, which can be used to form assessments about its quality, reliability or trustworthiness. For example a description of the source of this indicator, e.g. academic papers or standards, any calculations or adjustments performed on the raw data and any organisations involved in producing or transforming the data." ;
+            rdfs:label "Provenance" .
 
 
 ###  https://hse.ie/data/ontology/phi#rationale
@@ -332,23 +342,28 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:range xsd:string ;
            <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
            <http://purl.org/dc/terms/creator> "Rob" ;
-           <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-           <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+           <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+           <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
            rdfs:comment "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators." ;
            rdfs:label "Rationale" .
 
 
+###  https://hse.ie/data/ontology/phi#sameAs
+:sameAs rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+
 ###  https://hse.ie/data/ontology/phi#title
 :title rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf <http://purl.org/dc/terms/title> ;
        rdfs:domain :Indicator ;
        rdfs:range xsd:string ;
        <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
        <http://purl.org/dc/terms/creator> "Rob" ;
-       <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-       <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+       <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+       <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
        rdfs:comment "Full name of the indicator as used in reports or dashboards." ;
-       rdfs:label "Indicator Title" ;
-       rdfs:seeAlso <http://purl.org/dc/terms/title> .
+       rdfs:label "Indicator Title" .
 
 
 ###  https://hse.ie/data/ontology/phi#validityGuidance
@@ -357,8 +372,8 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:range xsd:string ;
                   <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
                   <http://purl.org/dc/terms/creator> "Rob" ;
-                  <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-                  <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+                  <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+                  <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
                   rdfs:comment "Description of how the indicator might be influenced by other variables or biases, affecting validity." ;
                   rdfs:label "Validity Guidance" .
 
@@ -379,10 +394,31 @@ xsd:date rdf:type rdfs:Datatype .
 :Indicator rdf:type owl:Class ;
            <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
            <http://purl.org/dc/terms/creator> "Rob" ;
-           <http://purl.org/dc/terms/modified> "2025-08-22"^^xsd:date ;
-           <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" ;
+           <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+           <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
            rdfs:comment "A population health indicator that measures specific aspects of health and wellbeing." ;
            rdfs:label "Indicator" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://hse.ie/data/ontology/phi#
+<https://hse.ie/data/ontology/phi#> rdf:type owl:NamedIndividual ;
+                                    <http://purl.org/dc/terms/title> "Population Health Indicator Ontology" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:sameAs <http://purl.org/dc/terms/created> "2025-08-18"^^xsd:date ;
+        <http://purl.org/dc/terms/creator> "Rob" ;
+        <http://purl.org/dc/terms/modified> "2025-08-29"^^xsd:date ;
+        <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" ;
+        rdfs:comment "A list of alterative identifiers for this indicator from other data publishers or coding schemes, e.g. CSO statistic identifier URL" ;
+        rdfs:label "Other Identifiers" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

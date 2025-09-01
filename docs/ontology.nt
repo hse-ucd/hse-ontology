@@ -7,8 +7,7 @@
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/issued> "2025-08-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/modified> "2025-08-21"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
-<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/title> "Population Health Indicator Ontology" .
+<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project." .
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#label> "Population Health Indicator Ontology" .
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://openreview.net/pdf?id=JMWarUh56o> .
@@ -46,9 +45,6 @@
 # http://purl.org/dc/terms/source
 <http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # 
 # 
 # #################################################################
@@ -70,18 +66,24 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/terms/accrualPeriodicity
+<http://purl.org/dc/terms/accrualPeriodicity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2002/07/owl#sameAs
+<http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # https://hse.ie/data/ontology/phi#accrualPeriodicity
 <https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/accrualPeriodicity> .
 <https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 <https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
-<https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/2000/01/rdf-schema#comment> "Frequency of reporting period, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of reports." .
+<https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
+<https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/2000/01/rdf-schema#comment> "Frequency of indicator update in report, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of indicator reports.Note that datasets have their own -Frequency of data updates- field to state how often they are updated." .
 <https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/2000/01/rdf-schema#label> "Report Frequency" .
-<https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/accrualPeriodicity> .
 # 
 # https://hse.ie/data/ontology/phi#denominatorSource
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -90,8 +92,8 @@
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier, e.g. URL, for the dataset providing a denominator data element. If there are multiple denominator data elements then multiple datasets must be provided as a list." .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://www.w3.org/2000/01/rdf-schema#label> "Denominator Source Dataset" .
 # 
@@ -101,8 +103,8 @@
 <https://hse.ie/data/ontology/phi#domain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://hse.ie/data/ontology/phi#domain> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#domain> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#domain> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#domain> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#domain> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#domain> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#domain> <http://www.w3.org/2000/01/rdf-schema#comment> "The high-level category the indicator falls under (e.g. Demography)." .
 <https://hse.ie/data/ontology/phi#domain> <http://www.w3.org/2000/01/rdf-schema#label> "Domain" .
 <https://hse.ie/data/ontology/phi#domain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://healthdcat-ap.github.io/#DatasethealthTheme> .
@@ -113,8 +115,8 @@
 <https://hse.ie/data/ontology/phi#indicatorType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://hse.ie/data/ontology/phi#indicatorType> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#indicatorType> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#indicatorType> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#indicatorType> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#indicatorType> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#indicatorType> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#indicatorType> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies if the indicator has both a numerator and a denominator, is coverage, accumulated or qualitative type" .
 <https://hse.ie/data/ontology/phi#indicatorType> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator Type" .
 # 
@@ -124,21 +126,15 @@
 <https://hse.ie/data/ontology/phi#numeratorSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> .
 <https://hse.ie/data/ontology/phi#numeratorSource> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#numeratorSource> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#numeratorSource> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#numeratorSource> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#numeratorSource> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#numeratorSource> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#numeratorSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list." .
 <https://hse.ie/data/ontology/phi#numeratorSource> <http://www.w3.org/2000/01/rdf-schema#label> "Numerator Source Dataset" .
 # 
-# https://hse.ie/data/ontology/phi#reportStyle
-<https://hse.ie/data/ontology/phi#reportStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://hse.ie/data/ontology/phi#reportStyle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
-<https://hse.ie/data/ontology/phi#reportStyle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://hse.ie/data/ontology/phi#reportStyle> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#reportStyle> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#reportStyle> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#reportStyle> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
-<https://hse.ie/data/ontology/phi#reportStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the period to which the data applies and how that is used with reporting frequency to generate a report." .
-<https://hse.ie/data/ontology/phi#reportStyle> <http://www.w3.org/2000/01/rdf-schema#label> "Report Style" .
+# https://hse.ie/data/ontology/phi#sameAs
+<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#sameAs> .
+<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 # 
 # https://hse.ie/data/ontology/phi#status
 <https://hse.ie/data/ontology/phi#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -146,10 +142,11 @@
 <https://hse.ie/data/ontology/phi#status> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://hse.ie/data/ontology/phi#status> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#status> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#status> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#status> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#status> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#status> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#status> <http://www.w3.org/2000/01/rdf-schema#comment> "An internal prioritisation process status for the dataset or indicator" .
 <https://hse.ie/data/ontology/phi#status> <http://www.w3.org/2000/01/rdf-schema#label> "Status" .
+<https://hse.ie/data/ontology/phi#status> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://hse.ie/data/ontology/phi#StatusCodes> .
 # 
 # https://hse.ie/data/ontology/phi#subdomain
 <https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -157,8 +154,8 @@
 <https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://hse.ie/data/ontology/phi#subdomain> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#subdomain> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#subdomain> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#subdomain> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#subdomain> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#subdomain> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/2000/01/rdf-schema#comment> "A more specific category under the domain (e.g. Population numbers)." .
 <https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/2000/01/rdf-schema#label> "Subdomain" .
 <https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://healthdcat-ap.github.io/#DatasethealthTheme> .
@@ -172,17 +169,35 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://purl.org/dc/terms/provenance
+<http://purl.org/dc/terms/provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
 # https://hse.ie/data/ontology/phi#definition
 <https://hse.ie/data/ontology/phi#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phi#definition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#definition> .
 <https://hse.ie/data/ontology/phi#definition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 <https://hse.ie/data/ontology/phi#definition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#definition> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#definition> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#definition> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#definition> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#definition> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#definition> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#definition> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical description of the indicator—what it measures, how it's defined, and any assumptions or limitations in interpretation." .
 <https://hse.ie/data/ontology/phi#definition> <http://www.w3.org/2000/01/rdf-schema#label> "Definition" .
-<https://hse.ie/data/ontology/phi#definition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2004/02/skos/core#definition> .
 # 
 # https://hse.ie/data/ontology/phi#denominatorDataElement
 <https://hse.ie/data/ontology/phi#denominatorDataElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -190,8 +205,8 @@
 <https://hse.ie/data/ontology/phi#denominatorDataElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#denominatorDataElement> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#denominatorDataElement> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#denominatorDataElement> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#denominatorDataElement> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#denominatorDataElement> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#denominatorDataElement> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#denominatorDataElement> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list." .
 <https://hse.ie/data/ontology/phi#denominatorDataElement> <http://www.w3.org/2000/01/rdf-schema#label> "Denominator Data Element" .
 # 
@@ -201,8 +216,8 @@
 <https://hse.ie/data/ontology/phi#disaggregation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#disaggregation> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#disaggregation> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#disaggregation> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#disaggregation> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#disaggregation> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#disaggregation> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#disaggregation> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of disaggregation conditions that should be available e.g. male and female" .
 <https://hse.ie/data/ontology/phi#disaggregation> <http://www.w3.org/2000/01/rdf-schema#label> "Disaggregations" .
 # 
@@ -212,45 +227,34 @@
 <https://hse.ie/data/ontology/phi#highLowGuidance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#highLowGuidance> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#highLowGuidance> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#highLowGuidance> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#highLowGuidance> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#highLowGuidance> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#highLowGuidance> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#highLowGuidance> <http://www.w3.org/2000/01/rdf-schema#comment> "Guidance on how to understand high or low values—whether they suggest good or poor outcomes." .
 <https://hse.ie/data/ontology/phi#highLowGuidance> <http://www.w3.org/2000/01/rdf-schema#label> "High-Low Guidance" .
 # 
 # https://hse.ie/data/ontology/phi#historyNote
 <https://hse.ie/data/ontology/phi#historyNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phi#historyNote> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#historyNote> .
 <https://hse.ie/data/ontology/phi#historyNote> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 <https://hse.ie/data/ontology/phi#historyNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#historyNote> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#historyNote> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#historyNote> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#historyNote> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#historyNote> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#historyNote> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#historyNote> <http://www.w3.org/2000/01/rdf-schema#comment> "Reasons for Inclusion or Exclusion" .
 <https://hse.ie/data/ontology/phi#historyNote> <http://www.w3.org/2000/01/rdf-schema#label> "Reasons for Inclusion/Exclusion" .
-<https://hse.ie/data/ontology/phi#historyNote> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2004/02/skos/core#historyNote> .
 # 
 # https://hse.ie/data/ontology/phi#identifier
 <https://hse.ie/data/ontology/phi#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phi#identifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> .
 <https://hse.ie/data/ontology/phi#identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 <https://hse.ie/data/ontology/phi#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://hse.ie/data/ontology/phi#identifier> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#identifier> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#identifier> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#identifier> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#identifier> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#identifier> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue." .
 <https://hse.ie/data/ontology/phi#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator ID" .
-<https://hse.ie/data/ontology/phi#identifier> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/identifier> .
-# 
-# https://hse.ie/data/ontology/phi#importance
-<https://hse.ie/data/ontology/phi#importance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://hse.ie/data/ontology/phi#importance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
-<https://hse.ie/data/ontology/phi#importance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://hse.ie/data/ontology/phi#importance> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#importance> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#importance> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#importance> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
-<https://hse.ie/data/ontology/phi#importance> <http://www.w3.org/2000/01/rdf-schema#comment> "Explanation of the significance of this indicator in terms of population health impact, burden of disease, or priority within health strategy." .
-<https://hse.ie/data/ontology/phi#importance> <http://www.w3.org/2000/01/rdf-schema#label> "Public Health Importance" .
 # 
 # https://hse.ie/data/ontology/phi#measurementLimitations
 <https://hse.ie/data/ontology/phi#measurementLimitations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -258,8 +262,8 @@
 <https://hse.ie/data/ontology/phi#measurementLimitations> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#measurementLimitations> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#measurementLimitations> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#measurementLimitations> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#measurementLimitations> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#measurementLimitations> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#measurementLimitations> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#measurementLimitations> <http://www.w3.org/2000/01/rdf-schema#comment> "Notes on limitations or uncertainty introduced by how the data are collected or calculated." .
 <https://hse.ie/data/ontology/phi#measurementLimitations> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement Limitations" .
 # 
@@ -269,22 +273,22 @@
 <https://hse.ie/data/ontology/phi#methodology> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#methodology> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#methodology> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#methodology> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#methodology> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#methodology> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#methodology> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#methodology> <http://www.w3.org/2000/01/rdf-schema#comment> "Summary of methods used to calculate the indicator (e.,g statistical technique, smoothing, standardisation, modelling)." .
 <https://hse.ie/data/ontology/phi#methodology> <http://www.w3.org/2000/01/rdf-schema#label> "Methodology" .
 # 
 # https://hse.ie/data/ontology/phi#note
 <https://hse.ie/data/ontology/phi#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phi#note> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#note> .
 <https://hse.ie/data/ontology/phi#note> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 <https://hse.ie/data/ontology/phi#note> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#note> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#note> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#note> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#note> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#note> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#note> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#note> <http://www.w3.org/2000/01/rdf-schema#comment> "Any additional informal information about the dataset or indicator" .
 <https://hse.ie/data/ontology/phi#note> <http://www.w3.org/2000/01/rdf-schema#label> "Notes" .
-<https://hse.ie/data/ontology/phi#note> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2004/02/skos/core#note> .
 # 
 # https://hse.ie/data/ontology/phi#numeratorDataElement
 <https://hse.ie/data/ontology/phi#numeratorDataElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -292,22 +296,22 @@
 <https://hse.ie/data/ontology/phi#numeratorDataElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#numeratorDataElement> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#numeratorDataElement> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#numeratorDataElement> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#numeratorDataElement> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#numeratorDataElement> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#numeratorDataElement> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#numeratorDataElement> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list." .
 <https://hse.ie/data/ontology/phi#numeratorDataElement> <http://www.w3.org/2000/01/rdf-schema#label> "Numerator Data Element" .
 # 
 # https://hse.ie/data/ontology/phi#provenance
 <https://hse.ie/data/ontology/phi#provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phi#provenance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/provenance> .
 <https://hse.ie/data/ontology/phi#provenance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 <https://hse.ie/data/ontology/phi#provenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#provenance> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#provenance> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#provenance> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#provenance> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
-<https://hse.ie/data/ontology/phi#provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of source of this indicator, e.g. academic papers, standards." .
+<https://hse.ie/data/ontology/phi#provenance> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#provenance> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
+<https://hse.ie/data/ontology/phi#provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Provenance is information about entities, activities, and people involved in producing an indicator, which can be used to form assessments about its quality, reliability or trustworthiness. For example a description of the source of this indicator, e.g. academic papers or standards, any calculations or adjustments performed on the raw data and any organisations involved in producing or transforming the data." .
 <https://hse.ie/data/ontology/phi#provenance> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance" .
-<https://hse.ie/data/ontology/phi#provenance> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/provenance> .
 # 
 # https://hse.ie/data/ontology/phi#rationale
 <https://hse.ie/data/ontology/phi#rationale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -315,22 +319,26 @@
 <https://hse.ie/data/ontology/phi#rationale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#rationale> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#rationale> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#rationale> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#rationale> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#rationale> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#rationale> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#rationale> <http://www.w3.org/2000/01/rdf-schema#comment> "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators." .
 <https://hse.ie/data/ontology/phi#rationale> <http://www.w3.org/2000/01/rdf-schema#label> "Rationale" .
 # 
+# https://hse.ie/data/ontology/phi#sameAs
+<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
 # https://hse.ie/data/ontology/phi#title
 <https://hse.ie/data/ontology/phi#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phi#title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/title> .
 <https://hse.ie/data/ontology/phi#title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 <https://hse.ie/data/ontology/phi#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#title> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#title> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#title> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#title> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#title> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#title> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#title> <http://www.w3.org/2000/01/rdf-schema#comment> "Full name of the indicator as used in reports or dashboards." .
 <https://hse.ie/data/ontology/phi#title> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator Title" .
-<https://hse.ie/data/ontology/phi#title> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/title> .
 # 
 # https://hse.ie/data/ontology/phi#validityGuidance
 <https://hse.ie/data/ontology/phi#validityGuidance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -338,8 +346,8 @@
 <https://hse.ie/data/ontology/phi#validityGuidance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://hse.ie/data/ontology/phi#validityGuidance> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#validityGuidance> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#validityGuidance> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#validityGuidance> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#validityGuidance> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#validityGuidance> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#validityGuidance> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of how the indicator might be influenced by other variables or biases, affecting validity." .
 <https://hse.ie/data/ontology/phi#validityGuidance> <http://www.w3.org/2000/01/rdf-schema#label> "Validity Guidance" .
 # 
@@ -360,9 +368,38 @@
 <https://hse.ie/data/ontology/phi#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://hse.ie/data/ontology/phi#Indicator> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#Indicator> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#Indicator> <http://purl.org/dc/terms/modified> "2025-08-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#Indicator> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.12" .
+<https://hse.ie/data/ontology/phi#Indicator> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#Indicator> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#Indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "A population health indicator that measures specific aspects of health and wellbeing." .
 <https://hse.ie/data/ontology/phi#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://hse.ie/data/ontology/phi#
+<https://hse.ie/data/ontology/phi#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/title> "Population Health Indicator Ontology" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://hse.ie/data/ontology/phi#sameAs> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#sameAs> <http://purl.org/dc/terms/creator> "Rob" .
+<https://hse.ie/data/ontology/phi#sameAs> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#sameAs> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
+<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of alterative identifiers for this indicator from other data publishers or coding schemes, e.g. CSO statistic identifier URL" .
+<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#label> "Other Identifiers" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
