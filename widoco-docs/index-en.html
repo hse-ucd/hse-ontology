@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Population Health Dataset Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://hse.ie/data/ontology/phd#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://hse.ie/data/ontology/phd#","name":"Population Health Dataset Ontology", "headline":"An ontology for descibing population health dataset, created during the Older Adult Health and Wellbeing Profile project.", "dateReleased":"Sun Sep 21 10:38:09 IST 2025", "dateModified":"19 Sep, 2025", "version":"1.0.0", "license":"http://creativecommons.org/licenses/by/2.0/", "contributor":[{"@type":"Person","name":"Rob Brennan"},{"@type":"Person","name":" Junli Liang"},{"@type":"Person","name":" Huan Chen"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Population Health Dataset Ontology</h1>
+
+
+<dl>
+<dt>Modified on: 19 Sep, 2025</dt>
+<dt>This version:</dt>
+<dd><a href="https://github.com/hse-ucd/hse-ontology/blob/main/phd-ontology.ttl">https://github.com/hse-ucd/hse-ontology/blob/main/phd-ontology.ttl</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Issued on:</dt>
+<dd>19 Sep, 2025</dd>
+<dt>Contributors:</dt>
+<dd>Rob Brennan</dd><dd> Junli Liang</dd><dd> Huan Chen</dd>
+
+<dt>Source:</dt>
+<dd><a href="Data Catalog Vocabulary (DCAT) - Version 3">Data Catalog Vocabulary (DCAT) - Version 3</a></dd>
+
+<dt>See also:</dt>
+<dd><a href="https://openreview.net/pdf?id=JMWarUh56o">https://openreview.net/pdf?id=JMWarUh56o</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/2.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY-blue.svg" alt="http://creativecommons.org/licenses/by/2.0/" /></a>
+<a href="http://creativecommons.org/licenses/by/2.0/" rel="license" target="_blank">
+<img src="https://i.creativecommons.org/l/by/2.0/88x31.png" style="border-width:0" alt="License" />
+</a>
+<br/></dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Population Health Dataset Ontology. Revision: 1.0. Retrieved from: https://github.com/hse-ucd/hse-ontology/blob/main/phd-ontology.ttl</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+An ontology for descibing population health dataset, created during the Older Adult Health and Wellbeing Profile project.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">This ontology was developed to standardise how population health datasets are described. Its purpose is to make datasets easier to discover, compare, and reuse in support of population health analysis and planning. The ontology builds on established standards such as DCAT, Dublin Core, and DPV, while introducing additional terms specific to population health. It captures the core elements of a dataset and its supporting metadata, enabling consistent representation across different sources.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>adms</b></td><td>&lt;http://www.w3.org/ns/adms#&gt;</td></tr>
+<tr><td><b>dcat</b></td><td>&lt;http://www.w3.org/ns/dcat#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>dpv</b></td><td>&lt;https://w3id.org/dpv#&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/spec/#&gt;</td></tr>
+<tr><td><b>healthdcatap</b></td><td>&lt;https://healthdcat-ap.github.io&gt;</td></tr>
+<tr><td><b>https</b></td><td>&lt;https://&gt;</td></tr>
+<tr><td><b>ns</b></td><td>&lt;http://www.w3.org/2006/vcard/ns#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>phd</b></td><td>&lt;https://hse.ie/data/ontology/phd#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Population Health Dataset Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Dataset" title="https://hse.ie/data/ontology/phd#Dataset">
+         <span>Dataset</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#applicableLegislation"
+         title="https://hse.ie/data/ontology/phd#applicableLegislation">
+         <span>Applicable Legislation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo">
+         <span>Conforms to Standard</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>Data Creator (Organisation)</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/spec/#page" title="http://xmlns.com/foaf/spec/#page">
+         <span>Documentation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">
+         <span>File Format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iohdab" title="https://healthdcat-ap.github.iohdab">
+         <span>Health data access body</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#inSeries" title="http://www.w3.org/ns/dcat#inSeries">
+         <span>In Series</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/adms#sample" title="http://www.w3.org/ns/adms#sample">
+         <span>Link to Dataset Sample</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#contactPoint" title="http://www.w3.org/ns/dcat#contactPoint">
+         <span>Main Point of Contact</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>Publisher Name</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/accessRights" title="http://purl.org/dc/terms/accessRights">
+         <span>Access Rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/dpv#hasPersonalData" title="https://w3id.org/dpv#hasPersonalData">
+         <span>Contains Personal Data</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/dpv#hasDataController" title="https://w3id.org/dpv#hasDataController">
+         <span>Data Controller</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/temporalEndDate" title="http://purl.org/dc/terms/temporalEndDate">
+         <span>Data Coverage End Date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/temporalStartDate" title="http://purl.org/dc/terms/temporalStartDate">
+         <span>Data Coverage Start Date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>Dataset Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>Description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note">
+         <span>Flag specific issues e.g. data availability/access (or other issues)</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/accrualPeriodicity" title="http://purl.org/dc/terms/accrualPeriodicity">
+         <span>Frequency of data updates</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasCodingScheme" title="https://hse.ie/data/ontology/phd#hasCodingScheme">
+         <span>Has Coding Scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/dpv#hasLegalBasis" title="https://w3id.org/dpv#hasLegalBasis">
+         <span>Has Legal Basis</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iohealthCategory" title="https://healthdcat-ap.github.iohealthCategory">
+         <span>Health Data Category</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iohealthTheme" title="https://healthdcat-ap.github.iohealthTheme">
+         <span>Health Theme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">
+         <span>Keywords</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language">
+         <span>Language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iomaxTypicalAge" title="https://healthdcat-ap.github.iomaxTypicalAge">
+         <span>Maximum Typical Age</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#temporalResolution" title="http://www.w3.org/ns/dcat#temporalResolution">
+         <span>Minimum Temporal Resolution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iominTypicalAge" title="https://healthdcat-ap.github.iominTypicalAge">
+         <span>Minimum Typical Age</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.ionumberOfUniqueIndividuals"
+         title="https://healthdcat-ap.github.ionumberOfUniqueIndividuals">
+         <span>Number of records for unique individuals.</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iopopulationCoverage"
+         title="https://healthdcat-ap.github.iopopulationCoverage">
+         <span>Population coverage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#provenance" title="http://www.w3.org/ns/dcat#provenance">
+         <span>Provenance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#publicsherType" title="http://www.w3.org/ns/dcat#publicsherType">
+         <span>Publisher Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/spatial" title="http://purl.org/dc/terms/spatial">
+         <span>Region Covered</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#comment" title="http://www.w3.org/2000/01/rdf-schema#comment">
+         <span>Relevance to Older Persons Health &amp; Wellbeing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+         title="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+         <span>Spatial Resolution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#status" title="https://hse.ie/data/ontology/phd#status">
+         <span>Status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#theme" title="http://www.w3.org/ns/dcat#theme">
+         <span>Theme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/dataType" title="http://purl.org/dc/terms/dataType">
+         <span>Type of Data</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#identifier" title="http://www.w3.org/ns/dcat#identifier">
+         <span>URL</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/accessRights" title="http://purl.org/dc/terms/accessRights">
+         <span>Access Rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#applicableLegislation"
+         title="https://hse.ie/data/ontology/phd#applicableLegislation">
+         <span>Applicable Legislation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo">
+         <span>Conforms to Standard</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/dpv#hasPersonalData" title="https://w3id.org/dpv#hasPersonalData">
+         <span>Contains Personal Data</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/dpv#hasDataController" title="https://w3id.org/dpv#hasDataController">
+         <span>Data Controller</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/temporalEndDate" title="http://purl.org/dc/terms/temporalEndDate">
+         <span>Data Coverage End Date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/temporalStartDate" title="http://purl.org/dc/terms/temporalStartDate">
+         <span>Data Coverage Start Date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>Data Creator (Organisation)</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Dataset" title="https://hse.ie/data/ontology/phd#Dataset">
+         <span>Dataset</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>Dataset Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>Description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/spec/#page" title="http://xmlns.com/foaf/spec/#page">
+         <span>Documentation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">
+         <span>File Format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note">
+         <span>Flag specific issues e.g. data availability/access (or other issues)</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/accrualPeriodicity" title="http://purl.org/dc/terms/accrualPeriodicity">
+         <span>Frequency of data updates</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasCodingScheme" title="https://hse.ie/data/ontology/phd#hasCodingScheme">
+         <span>Has Coding Scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/dpv#hasLegalBasis" title="https://w3id.org/dpv#hasLegalBasis">
+         <span>Has Legal Basis</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iohdab" title="https://healthdcat-ap.github.iohdab">
+         <span>Health data access body</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iohealthCategory" title="https://healthdcat-ap.github.iohealthCategory">
+         <span>Health Data Category</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iohealthTheme" title="https://healthdcat-ap.github.iohealthTheme">
+         <span>Health Theme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#inSeries" title="http://www.w3.org/ns/dcat#inSeries">
+         <span>In Series</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">
+         <span>Keywords</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language">
+         <span>Language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/adms#sample" title="http://www.w3.org/ns/adms#sample">
+         <span>Link to Dataset Sample</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#contactPoint" title="http://www.w3.org/ns/dcat#contactPoint">
+         <span>Main Point of Contact</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iomaxTypicalAge" title="https://healthdcat-ap.github.iomaxTypicalAge">
+         <span>Maximum Typical Age</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#temporalResolution" title="http://www.w3.org/ns/dcat#temporalResolution">
+         <span>Minimum Temporal Resolution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iominTypicalAge" title="https://healthdcat-ap.github.iominTypicalAge">
+         <span>Minimum Typical Age</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.ionumberOfUniqueIndividuals"
+         title="https://healthdcat-ap.github.ionumberOfUniqueIndividuals">
+         <span>Number of records for unique individuals.</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://healthdcat-ap.github.iopopulationCoverage"
+         title="https://healthdcat-ap.github.iopopulationCoverage">
+         <span>Population coverage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#" title="https://hse.ie/data/ontology/phd#">
+         <span>Population Health Datasets Ontology</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#provenance" title="http://www.w3.org/ns/dcat#provenance">
+         <span>Provenance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>Publisher Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#publicsherType" title="http://www.w3.org/ns/dcat#publicsherType">
+         <span>Publisher Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/spatial" title="http://purl.org/dc/terms/spatial">
+         <span>Region Covered</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#comment" title="http://www.w3.org/2000/01/rdf-schema#comment">
+         <span>Relevance to Older Persons Health &amp; Wellbeing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#spatialResolutionInMeters"
+         title="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+         <span>Spatial Resolution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#status" title="https://hse.ie/data/ontology/phd#status">
+         <span>Status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#theme" title="http://www.w3.org/ns/dcat#theme">
+         <span>Theme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/dataType" title="http://purl.org/dc/terms/dataType">
+         <span>Type of Data</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#identifier" title="http://www.w3.org/ns/dcat#identifier">
+         <span>URL</span>
+      </a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Population Health Dataset Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">"An ontology for describing population health datasets and their metadata. It aligns with DCAT, Dublin Core, and related standards, and extends them with additional terms needed for population health planning and analysis."</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Population Health Dataset Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Population Health Dataset Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Dataset" title="https://hse.ie/data/ontology/phd#Dataset"> <span>Dataset</span> </a></li>
+ </ul>
+ <div class="entity" id="Dataset">
+  <h3>Dataset<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#Dataset</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#Dataset">named individual</a>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#applicableLegislation" title="https://hse.ie/data/ontology/phd#applicableLegislation"> <span>Applicable Legislation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo"> <span>Conforms to Standard</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>Data Creator (Organisation)</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/spec/#page" title="http://xmlns.com/foaf/spec/#page"> <span>Documentation</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution"> <span>File Format</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iohdab" title="https://healthdcat-ap.github.iohdab"> <span>Health data access body</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#inSeries" title="http://www.w3.org/ns/dcat#inSeries"> <span>In Series</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/adms#sample" title="http://www.w3.org/ns/adms#sample"> <span>Link to Dataset Sample</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#contactPoint" title="http://www.w3.org/ns/dcat#contactPoint"> <span>Main Point of Contact</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>Publisher Name</span> </a></li>
+ </ul>
+ <div class="entity" id="applicableLegislation">
+  <h3>Applicable Legislation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#applicableLegislation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Resource" target="_blank" title="http://www.w3.org/ns/dcat#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#applicableLegislation">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/conformsTo">
+  <h3>Conforms to Standard<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/conformsTo</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Resource" target="_blank" title="http://www.w3.org/ns/dcat#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/conformsTo">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>Data Creator (Organisation)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://xmlns.com/foaf/spec/#Agent" target="_blank" title="http://xmlns.com/foaf/spec/#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/creator">named individual</a>, <a href="#http://purl.org/dc/terms/creator">annotation property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/spec/#page">
+  <h3>Documentation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/spec/#page</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://xmlns.com/foaf/spec/#Document" target="_blank" title="http://xmlns.com/foaf/spec/#Document">Document</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://xmlns.com/foaf/spec/#page">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#distribution">
+  <h3>File Format<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#distribution</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://xmlns.com/foaf/spec/#Agent" target="_blank" title="http://xmlns.com/foaf/spec/#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#distribution">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iohdab">
+  <h3>Health data access body<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iohdab</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://xmlns.com/foaf/spec/#Agent" target="_blank" title="http://xmlns.com/foaf/spec/#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://healthdcat-ap.github.iohdab">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#inSeries">
+  <h3>In Series<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#inSeries</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#DatasetSeries" target="_blank" title="http://www.w3.org/ns/dcat#DatasetSeries">Dataset Series</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#inSeries">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/adms#sample">
+  <h3>Link to Dataset Sample<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/adms#sample</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Resource" target="_blank" title="http://www.w3.org/ns/dcat#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/adms#sample">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#contactPoint">
+  <h3>Main Point of Contact<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#contactPoint</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Resource" target="_blank" title="http://www.w3.org/ns/dcat#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2006/vcard/ns#Kind" target="_blank" title="http://www.w3.org/2006/vcard/ns#Kind">Kind</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#contactPoint">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>Publisher Name<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://xmlns.com/foaf/spec/#Agent" target="_blank" title="http://xmlns.com/foaf/spec/#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/publisher">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/accessRights" title="http://purl.org/dc/terms/accessRights"> <span>Access Rights</span> </a></li>
+  <li><a href="#https://w3id.org/dpv#hasPersonalData" title="https://w3id.org/dpv#hasPersonalData"> <span>Contains Personal Data</span> </a></li>
+  <li><a href="#https://w3id.org/dpv#hasDataController" title="https://w3id.org/dpv#hasDataController"> <span>Data Controller</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/temporalEndDate" title="http://purl.org/dc/terms/temporalEndDate"> <span>Data Coverage End Date</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/temporalStartDate" title="http://purl.org/dc/terms/temporalStartDate"> <span>Data Coverage Start Date</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>Dataset Name</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>Description</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note"> <span>Flag specific issues e.g. data availability/access (or other issues)</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/accrualPeriodicity" title="http://purl.org/dc/terms/accrualPeriodicity"> <span>Frequency of data updates</span> </a></li>
+  <li><a href="#hasCodingScheme" title="https://hse.ie/data/ontology/phd#hasCodingScheme"> <span>Has Coding Scheme</span> </a></li>
+  <li><a href="#https://w3id.org/dpv#hasLegalBasis" title="https://w3id.org/dpv#hasLegalBasis"> <span>Has Legal Basis</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iohealthCategory" title="https://healthdcat-ap.github.iohealthCategory"> <span>Health Data Category</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iohealthTheme" title="https://healthdcat-ap.github.iohealthTheme"> <span>Health Theme</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword"> <span>Keywords</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language"> <span>Language</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iomaxTypicalAge" title="https://healthdcat-ap.github.iomaxTypicalAge"> <span>Maximum Typical Age</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#temporalResolution" title="http://www.w3.org/ns/dcat#temporalResolution"> <span>Minimum Temporal Resolution</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iominTypicalAge" title="https://healthdcat-ap.github.iominTypicalAge"> <span>Minimum Typical Age</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.ionumberOfUniqueIndividuals" title="https://healthdcat-ap.github.ionumberOfUniqueIndividuals"> <span>Number of records for unique individuals.</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iopopulationCoverage" title="https://healthdcat-ap.github.iopopulationCoverage"> <span>Population coverage</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#provenance" title="http://www.w3.org/ns/dcat#provenance"> <span>Provenance</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#publicsherType" title="http://www.w3.org/ns/dcat#publicsherType"> <span>Publisher Type</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/spatial" title="http://purl.org/dc/terms/spatial"> <span>Region Covered</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#comment" title="http://www.w3.org/2000/01/rdf-schema#comment"> <span>Relevance to Older Persons Health &amp; Wellbeing</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#spatialResolutionInMeters" title="http://www.w3.org/ns/dcat#spatialResolutionInMeters"> <span>Spatial Resolution</span> </a></li>
+  <li><a href="#status" title="https://hse.ie/data/ontology/phd#status"> <span>Status</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#theme" title="http://www.w3.org/ns/dcat#theme"> <span>Theme</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/dataType" title="http://purl.org/dc/terms/dataType"> <span>Type of Data</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#identifier" title="http://www.w3.org/ns/dcat#identifier"> <span>URL</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/accessRights">
+  <h3>Access Rights<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/accessRights</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/accessRights">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/dpv#hasPersonalData">
+  <h3>Contains Personal Data<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/dpv#hasPersonalData</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/dpv#hasPersonalData">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/dpv#hasDataController">
+  <h3>Data Controller<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/dpv#hasDataController</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/dpv#hasDataController">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/temporalEndDate">
+  <h3>Data Coverage End Date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/temporalEndDate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/temporalEndDate">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/temporalStartDate">
+  <h3>Data Coverage Start Date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/temporalStartDate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/temporalStartDate">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>Dataset Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/title">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>Description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/description">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#note">
+  <h3>Flag specific issues e.g. data availability/access (or other issues)<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#note</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2004/02/skos/core#note">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/accrualPeriodicity">
+  <h3>Frequency of data updates<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/accrualPeriodicity</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/accrualPeriodicity">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCodingScheme">
+  <h3>Has Coding Scheme<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#hasCodingScheme</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#hasCodingScheme">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/dpv#hasLegalBasis">
+  <h3>Has Legal Basis<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/dpv#hasLegalBasis</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/dpv#hasLegalBasis">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iohealthCategory">
+  <h3>Health Data Category<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iohealthCategory</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://healthdcat-ap.github.iohealthCategory">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iohealthTheme">
+  <h3>Health Theme<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iohealthTheme</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://healthdcat-ap.github.iohealthTheme">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#keyword">
+  <h3>Keywords<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#keyword</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#keyword">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/language">
+  <h3>Language<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/language</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/language">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iomaxTypicalAge">
+  <h3>Maximum Typical Age<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iomaxTypicalAge</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://healthdcat-ap.github.iomaxTypicalAge">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#temporalResolution">
+  <h3>Minimum Temporal Resolution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#temporalResolution</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#duration" target="_blank" title="http://www.w3.org/2001/XMLSchema#duration">duration</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#temporalResolution">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iominTypicalAge">
+  <h3>Minimum Typical Age<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iominTypicalAge</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://healthdcat-ap.github.iominTypicalAge">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.ionumberOfUniqueIndividuals">
+  <h3>Number of records for unique individuals.<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.ionumberOfUniqueIndividuals</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://healthdcat-ap.github.ionumberOfUniqueIndividuals">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iopopulationCoverage">
+  <h3>Population coverage<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iopopulationCoverage</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://healthdcat-ap.github.iopopulationCoverage">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#provenance">
+  <h3>Provenance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#provenance</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#provenance">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#publicsherType">
+  <h3>Publisher Type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#publicsherType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#publicsherType">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/spatial">
+  <h3>Region Covered<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/spatial</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/spatial">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#comment">
+  <h3>Relevance to Older Persons Health &amp; Wellbeing<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#comment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2000/01/rdf-schema#comment">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+  <h3>Spatial Resolution<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#spatialResolutionInMeters</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#spatialResolutionInMeters">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="status">
+  <h3>Status<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#status</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#status">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#theme">
+  <h3>Theme<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#theme</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#theme">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/dataType">
+  <h3>Type of Data<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/dataType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/dataType">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#identifier">
+  <h3>URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#identifier</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/dcat#Dataset" target="_blank" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/dcat#identifier">named individual</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/accessRights" title="http://purl.org/dc/terms/accessRights"> <span>Access Rights</span> </a></li>
+  <li><a href="#applicableLegislation" title="https://hse.ie/data/ontology/phd#applicableLegislation"> <span>Applicable Legislation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/conformsTo" title="http://purl.org/dc/terms/conformsTo"> <span>Conforms to Standard</span> </a></li>
+  <li><a href="#https://w3id.org/dpv#hasPersonalData" title="https://w3id.org/dpv#hasPersonalData"> <span>Contains Personal Data</span> </a></li>
+  <li><a href="#https://w3id.org/dpv#hasDataController" title="https://w3id.org/dpv#hasDataController"> <span>Data Controller</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/temporalEndDate" title="http://purl.org/dc/terms/temporalEndDate"> <span>Data Coverage End Date</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/temporalStartDate" title="http://purl.org/dc/terms/temporalStartDate"> <span>Data Coverage Start Date</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>Data Creator (Organisation)</span> </a></li>
+  <li><a href="#Dataset" title="https://hse.ie/data/ontology/phd#Dataset"> <span>Dataset</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>Dataset Name</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>Description</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/spec/#page" title="http://xmlns.com/foaf/spec/#page"> <span>Documentation</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution"> <span>File Format</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#note" title="http://www.w3.org/2004/02/skos/core#note"> <span>Flag specific issues e.g. data availability/access (or other issues)</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/accrualPeriodicity" title="http://purl.org/dc/terms/accrualPeriodicity"> <span>Frequency of data updates</span> </a></li>
+  <li><a href="#hasCodingScheme" title="https://hse.ie/data/ontology/phd#hasCodingScheme"> <span>Has Coding Scheme</span> </a></li>
+  <li><a href="#https://w3id.org/dpv#hasLegalBasis" title="https://w3id.org/dpv#hasLegalBasis"> <span>Has Legal Basis</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iohdab" title="https://healthdcat-ap.github.iohdab"> <span>Health data access body</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iohealthCategory" title="https://healthdcat-ap.github.iohealthCategory"> <span>Health Data Category</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iohealthTheme" title="https://healthdcat-ap.github.iohealthTheme"> <span>Health Theme</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#inSeries" title="http://www.w3.org/ns/dcat#inSeries"> <span>In Series</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword"> <span>Keywords</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language"> <span>Language</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/adms#sample" title="http://www.w3.org/ns/adms#sample"> <span>Link to Dataset Sample</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#contactPoint" title="http://www.w3.org/ns/dcat#contactPoint"> <span>Main Point of Contact</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iomaxTypicalAge" title="https://healthdcat-ap.github.iomaxTypicalAge"> <span>Maximum Typical Age</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#temporalResolution" title="http://www.w3.org/ns/dcat#temporalResolution"> <span>Minimum Temporal Resolution</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iominTypicalAge" title="https://healthdcat-ap.github.iominTypicalAge"> <span>Minimum Typical Age</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.ionumberOfUniqueIndividuals" title="https://healthdcat-ap.github.ionumberOfUniqueIndividuals"> <span>Number of records for unique individuals.</span> </a></li>
+  <li><a href="#https://healthdcat-ap.github.iopopulationCoverage" title="https://healthdcat-ap.github.iopopulationCoverage"> <span>Population coverage</span> </a></li>
+  <li><a href="#" title="https://hse.ie/data/ontology/phd#"> <span>Population Health Datasets Ontology</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#provenance" title="http://www.w3.org/ns/dcat#provenance"> <span>Provenance</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>Publisher Name</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#publicsherType" title="http://www.w3.org/ns/dcat#publicsherType"> <span>Publisher Type</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/spatial" title="http://purl.org/dc/terms/spatial"> <span>Region Covered</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#comment" title="http://www.w3.org/2000/01/rdf-schema#comment"> <span>Relevance to Older Persons Health &amp; Wellbeing</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#spatialResolutionInMeters" title="http://www.w3.org/ns/dcat#spatialResolutionInMeters"> <span>Spatial Resolution</span> </a></li>
+  <li><a href="#status" title="https://hse.ie/data/ontology/phd#status"> <span>Status</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#theme" title="http://www.w3.org/ns/dcat#theme"> <span>Theme</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/dataType" title="http://purl.org/dc/terms/dataType"> <span>Type of Data</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#identifier" title="http://www.w3.org/ns/dcat#identifier"> <span>URL</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/accessRights">
+  <h3>Access Rights<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/accessRights</p>
+  <div class="comment">
+   <span class="markdown">Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/accessRights">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="applicableLegislation">
+  <h3>Applicable Legislation<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#applicableLegislation</p>
+  <div class="comment">
+   <span class="markdown">The legislation that mandates the creation or management of the Dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#applicableLegislation">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/conformsTo">
+  <h3>Conforms to Standard<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/conformsTo</p>
+  <div class="comment">
+   <span class="markdown">An implementing rule or other specification.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/conformsTo">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/dpv#hasPersonalData">
+  <h3>Contains Personal Data<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/dpv#hasPersonalData</p>
+  <div class="comment">
+   <span class="markdown">Indicates association with Personal Data [in this dataset]</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/dpv#hasPersonalData">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/dpv#hasDataController">
+  <h3>Data Controller<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/dpv#hasDataController</p>
+  <div class="comment">
+   <span class="markdown">Indicates association with Data Controller [for this datset under GDPR]</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/dpv#hasDataController">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/temporalEndDate">
+  <h3>Data Coverage End Date<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/temporalEndDate</p>
+  <div class="comment">
+   <span class="markdown">The end date of the period covered by the data.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/temporalEndDate">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/temporalStartDate">
+  <h3>Data Coverage Start Date<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/temporalStartDate</p>
+  <div class="comment">
+   <span class="markdown">The start date of the period covered by the data.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/temporalStartDate">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>Data Creator (Organisation)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+  <div class="comment">
+   <span class="markdown">An entity (organisation) responsible for producing the dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/creator">object property</a>, <a href="#http://purl.org/dc/terms/creator">annotation property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Dataset">
+  <h3>Dataset<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#Dataset</p>
+  <div class="comment">
+   <span class="markdown">Collection of data, published or curated by a single agent, and available for access or download in one or more serializations or formats</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#Dataset">class</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>Dataset Name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+  <div class="comment">
+   <span class="markdown">The name of the dataset</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/title">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>Description<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+  <div class="comment">
+   <span class="markdown">A free-text account of the Dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/description">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/spec/#page">
+  <h3>Documentation<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/spec/#page</p>
+  <div class="comment">
+   <span class="markdown">A page or document about this Dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://xmlns.com/foaf/spec/#page">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#distribution">
+  <h3>File Format<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#distribution</p>
+  <div class="comment">
+   <span class="markdown">The file format of the [daatset] Distribution</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#distribution">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#note">
+  <h3>Flag specific issues e.g. data availability/access (or other issues)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#note</p>
+  <div class="comment">
+   <span class="markdown">Any additonal informal information about the dataset or indicator</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#note">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/accrualPeriodicity">
+  <h3>Frequency of data updates<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/accrualPeriodicity</p>
+  <div class="comment">
+   <span class="markdown">The frequency at which the Dataset is updated.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/accrualPeriodicity">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="hasCodingScheme">
+  <h3>Has Coding Scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#hasCodingScheme</p>
+  <div class="comment">
+   <span class="markdown">Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#hasCodingScheme">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/dpv#hasLegalBasis">
+  <h3>Has Legal Basis<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/dpv#hasLegalBasis</p>
+  <div class="comment">
+   <span class="markdown">Indicates use or applicability of a [GDPR] Legal Basis</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/dpv#hasLegalBasis">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iohdab">
+  <h3>Health data access body<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iohdab</p>
+  <div class="comment">
+   <span class="markdown">Health Data Access Body supporting access to data in the Member State. [This is yet to be fully established for Ireland, see HIQA]</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://healthdcat-ap.github.iohdab">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iohealthCategory">
+  <h3>Health Data Category<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iohealthCategory</p>
+  <div class="comment">
+   <span class="markdown">The health category to which this dataset belongs as described in the Commission Regulation on the European Health Data Space laying down a list of categories of electronic data for secondary use, Art.51.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://healthdcat-ap.github.iohealthCategory">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iohealthTheme">
+  <h3>Health Theme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iohealthTheme</p>
+  <div class="comment">
+   <span class="markdown">A category of the Dataset or tag describing the Dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://healthdcat-ap.github.iohealthTheme">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#inSeries">
+  <h3>In Series<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#inSeries</p>
+  <div class="comment">
+   <span class="markdown">A dataset series of which the dataset is part.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#inSeries">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#keyword">
+  <h3>Keywords<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#keyword</p>
+  <div class="comment">
+   <span class="markdown">A keyword or tag describing the Dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#keyword">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/language">
+  <h3>Language<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/language</p>
+  <div class="comment">
+   <span class="markdown">A language of the Dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/language">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/adms#sample">
+  <h3>Link to Dataset Sample<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/adms#sample</p>
+  <div class="comment">
+   <span class="markdown">A [URL to a] sample distribution of the dataset. [To illustrate the type of data it contains.]</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/adms#sample">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#contactPoint">
+  <h3>Main Point of Contact<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#contactPoint</p>
+  <div class="comment">
+   <span class="markdown">Contact information that can be used for sending comments about the Dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#contactPoint">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iomaxTypicalAge">
+  <h3>Maximum Typical Age<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iomaxTypicalAge</p>
+  <div class="comment">
+   <span class="markdown">Maximum typical age of the population within the dataset</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://healthdcat-ap.github.iomaxTypicalAge">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#temporalResolution">
+  <h3>Minimum Temporal Resolution<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#temporalResolution</p>
+  <div class="comment">
+   <span class="markdown">The minimum time period resolvable in the dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#temporalResolution">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iominTypicalAge">
+  <h3>Minimum Typical Age<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iominTypicalAge</p>
+  <div class="comment">
+   <span class="markdown">Minimum typical age of the population within the dataset</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://healthdcat-ap.github.iominTypicalAge">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.ionumberOfUniqueIndividuals">
+  <h3>Number of records for unique individuals.<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.ionumberOfUniqueIndividuals</p>
+  <div class="comment">
+   <span class="markdown">Number of records for unique individuals [described by the dataset].</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://healthdcat-ap.github.ionumberOfUniqueIndividuals">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://healthdcat-ap.github.iopopulationCoverage">
+  <h3>Population coverage<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://healthdcat-ap.github.iopopulationCoverage</p>
+  <div class="comment">
+   <span class="markdown">A definition of the population within the dataset</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#https://healthdcat-ap.github.iopopulationCoverage">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="">
+  <h3>Population Health Datasets Ontology<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#</p>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">Description</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"An ontology for describing population health datasets and their metadata. It aligns with DCAT, Dublin Core, and related standards, and extends them with additional terms needed for population health planning and analysis."</span>
+   </dd>
+   <dd>
+    <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Dataset Name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Population Health Datasets Ontology (phd)"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#provenance">
+  <h3>Provenance<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#provenance</p>
+  <div class="comment">
+   <span class="markdown">Description of source of this indicator, e.g. academic papers, standards.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#provenance">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>Publisher Name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+  <div class="comment">
+   <span class="markdown">An entity (organisation) responsible for making the Dataset available.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/publisher">object property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#publicsherType">
+  <h3>Publisher Type<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#publicsherType</p>
+  <div class="comment">
+   <span class="markdown">A type of organisation that makes the Dataset available.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#publicsherType">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/spatial">
+  <h3>Region Covered<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/spatial</p>
+  <div class="comment">
+   <span class="markdown">A geographic region that is covered by the Dataset.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/spatial">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#comment">
+  <h3>Relevance to Older Persons Health &amp; Wellbeing<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#comment</p>
+  <div class="comment">
+   <span class="markdown">Description of why this dataset is included</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2000/01/rdf-schema#comment">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+  <h3>Spatial Resolution<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#spatialResolutionInMeters</p>
+  <div class="comment">
+   <span class="markdown">The minimum spatial separation resolvable in a dataset, measured in meters.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#spatialResolutionInMeters">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="status">
+  <h3>Status<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://hse.ie/data/ontology/phd#status</p>
+  <div class="comment">
+   <span class="markdown">An internal prioritisation process status for the dataset or indicator</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#status">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#theme">
+  <h3>Theme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#theme</p>
+  <div class="comment">
+   <span class="markdown">This must always contain HEAL for a Health dataset, see health themes field for a way to specify themes</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#theme">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/dataType">
+  <h3>Type of Data<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/dataType</p>
+  <div class="comment">
+   <span class="markdown">For health datasets containing personal level information, the type of the dataset MUST take the value "personal data".</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/dataType">data property</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#identifier">
+  <h3>URL<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#identifier</p>
+  <div class="comment">
+   <span class="markdown">The main identifier for the Dataset, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/dcat#identifier">data property</a>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
