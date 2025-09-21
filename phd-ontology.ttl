@@ -1,0 +1,553 @@
+@base <https://hse.ie/data/ontology/phd#> .
+@prefix phd: <https://hse.ie/data/ontology/phd#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix healthdcatap: <https://healthdcat-ap.github.io> .
+
+phd:Dataset a rdfs:Class ;
+    rdfs:label "Dataset" ;
+    rdfs:comment "Collection of data, published or curated by a single agent, and available for access or download in one or more serializations or formats" ;
+    rdfs:subClassOf dcat:Dataset;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset> .
+
+
+dcterms:title a owl:DatatypeProperty ;
+    rdfs:label "Dataset Name" ;
+    rdfs:comment "The name of the dataset" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title> .
+
+
+dcat:identifier a owl:DatatypeProperty ;
+    rdfs:label "URL" ;
+    rdfs:comment "The main identifier for the Dataset, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#identifier> .
+
+
+dcterms:publisher a owl:ObjectProperty ;
+    rdfs:label "Publisher Name" ;
+    rdfs:comment "An entity (organisation) responsible for making the Dataset available." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range foaf:Agent ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher> .
+
+
+dcterms:description a owl:DatatypeProperty ;
+    rdfs:label "Description" ;
+    rdfs:comment "A free-text account of the Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description> .
+
+
+dcterms:creator a owl:ObjectProperty ;
+    rdfs:label "Data Creator (Organisation)" ;
+    rdfs:comment "An entity (organisation) responsible for producing the dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range foaf:Agent ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#creator> .
+
+
+phd:status a owl:DatatypeProperty ;
+    rdfs:label "Status" ;
+    rdfs:comment "An internal prioritisation process status for the dataset or indicator" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "PHD" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status> .
+
+
+dcat:provenance a owl:DatatypeProperty ;
+    rdfs:label "Provenance" ;
+    rdfs:comment "Description of source of this indicator, e.g. academic papers, standards." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+
+dcat:contactPoint a owl:ObjectProperty ;
+    rdfs:label "Main Point of Contact" ;
+    rdfs:comment "Contact information that can be used for sending comments about the Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Resource ;
+    rdfs:range vcard:Kind ;
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#contactPoint> .
+
+
+dcterms:dataType a owl:DatatypeProperty ;
+    rdfs:label "Type of Data" ;
+    rdfs:comment "For health datasets containing personal level information, the type of the dataset MUST take the value \"personal data\"." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#type> .
+
+
+dcterms:accrualPeriodicity a owl:DatatypeProperty ;
+    rdfs:label "Frequency of data updates" ;
+    rdfs:comment "The frequency at which the Dataset is updated." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#accrualPeriodicity> .
+
+
+dcterms:temporalStartDate a owl:DatatypeProperty ;
+    rdfs:label "Data Coverage Start Date" ;
+    rdfs:comment "The start date of the period covered by the data." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:date ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal> .
+
+
+dcterms:temporalEndDate a owl:DatatypeProperty ;
+    rdfs:label "Data Coverage End Date" ;
+    rdfs:comment "The end date of the period covered by the data." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:date ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal> .
+
+
+dcat:temporalResolution a owl:DatatypeProperty ;
+    rdfs:label "Minimum Temporal Resolution" ;
+    rdfs:comment "The minimum time period resolvable in the dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:duration ;
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#temporalResolution> .
+
+
+dcterms:spatial a owl:DatatypeProperty ;
+    rdfs:label "Region Covered" ;
+    rdfs:comment "A geographic region that is covered by the Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial> .
+
+
+dcat:spatialResolutionInMeters a owl:DatatypeProperty ;
+    rdfs:label "Spatial Resolution" ;
+    rdfs:comment "The minimum spatial separation resolvable in a dataset, measured in meters." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:integer ;
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#spatialResolutionInMeters> .
+
+dcterms:language a owl:DatatypeProperty ;
+    rdfs:label "Language" ;
+    rdfs:comment "A language of the Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#language> .
+
+
+foaf:page a owl:ObjectProperty ;
+    rdfs:label "Documentation" ;
+    rdfs:comment "A page or document about this Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "FOAF" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range foaf:Document ;
+    rdfs:seeAlso <http://xmlns.com/foaf/spec/#term_page> .
+
+
+dcterms:accessRights a owl:DatatypeProperty ;
+    rdfs:label "Access Rights" ;
+    rdfs:comment "Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#accessRights> .
+
+
+rdfs:comment a owl:DatatypeProperty ;
+    rdfs:label "Relevance to Older Persons Health & Wellbeing" ;
+    rdfs:comment "Description of why this dataset is included" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "RDFS" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.w3.org/TR/rdf-schema/#ch_comment> .
+
+
+skos:note a owl:DatatypeProperty ;
+    rdfs:label "Flag specific issues e.g. data availability/access (or other issues)" ;
+    rdfs:comment "Description of any known issues about using this dataset" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "SKOS" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso skos:note .
+
+
+dpv:hasPersonalData a owl:DatatypeProperty ;
+    rdfs:label "Contains Personal Data" ;
+    rdfs:comment "Indicates association with Personal Data [in this dataset]" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DPV" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:boolean ;
+    rdfs:seeAlso <https://w3c.github.io/dpv/2.1/dpv/#hasPersonalData> .
+
+
+
+dpv:hasDataController a owl:DatatypeProperty ;
+    rdfs:label "Data Controller" ;
+    rdfs:comment "Indicates association with Data Controller [for this datset under GDPR]" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DPV" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://w3c.github.io/dpv/2.1/dpv/#dfn-hasdatacontroller> .
+
+
+dpv:hasLegalBasis a owl:DatatypeProperty ;
+    rdfs:label "Has Legal Basis" ;
+    rdfs:comment "Indicates use or applicability of a [GDPR] Legal Basis" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DPV" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://w3c.github.io/dpv/2.1/dpv/#hasLegalBasis> .
+
+
+dcat:distribution a owl:ObjectProperty ;
+    rdfs:label "File Format" ;
+    rdfs:comment "The file format of the [daatset] Distribution" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range foaf:Agent ;
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#distribution> .
+
+
+adms:sample a owl:ObjectProperty ;
+    rdfs:label "Link to Dataset Sample" ;
+    rdfs:comment "A [URL to a] sample distribution of the dataset. [To illustrate the type of data it contains.]" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Resource ;
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-adms/#adms-sample> .
+
+
+dcat:keyword a owl:DatatypeProperty ;
+    rdfs:label "Keywords" ;
+    rdfs:comment "A keyword or tag describing the Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#keyword> .
+
+
+dcat:theme a owl:DatatypeProperty ;
+    rdfs:label "Theme" ;
+    rdfs:comment "This must always contain HEAL for a Health dataset, see health themes field for a way to specify themes" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#theme> .
+
+
+phd:applicableLegislation a owl:ObjectProperty ;
+    rdfs:label "Applicable Legislation" ;
+    rdfs:comment "The legislation that mandates the creation or management of the Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Resource .
+
+
+dcat:publicsherType a owl:DatatypeProperty ;
+    rdfs:label "Publisher Type" ;
+    rdfs:comment "A type of organisation that makes the Dataset available." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+
+healthdcatap:hdab a owl:ObjectProperty ;
+    rdfs:label "Health data access body" ;
+    rdfs:comment "Health Data Access Body supporting access to data in the Member State. [This is yet to be fully established for Ireland, see HIQA]" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "HealthDCAT-AP" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range foaf:Agent .
+
+
+healthdcatap:healthCategory a owl:DatatypeProperty ;
+    rdfs:label "Health Data Category" ;
+    rdfs:comment "The health category to which this dataset belongs as described in the Commission Regulation on the European Health Data Space laying down a list of categories of electronic data for secondary use, Art.51." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "HealthDCAT-AP" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+
+healthdcatap:healthTheme a owl:DatatypeProperty ;
+    rdfs:label "Health Theme" ;
+    rdfs:comment "A category of the Dataset or tag describing the Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "HealthDCAT-AP" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+
+dcterms:conformsTo a owl:ObjectProperty ;
+    rdfs:label "Conforms to Standard" ;
+    rdfs:comment "An implementing rule or other specification." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Resource ;
+    rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo> .
+
+
+phd:hasCodingScheme a owl:DatatypeProperty ;
+    rdfs:label "Has Coding Scheme" ;
+    rdfs:comment "Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+
+healthdcatap:minTypicalAge a owl:DatatypeProperty ;
+    rdfs:label "Minimum Typical Age" ;
+    rdfs:comment "Minimum typical age of the population within the dataset" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:integer .
+
+
+healthdcatap:maxTypicalAge a owl:DatatypeProperty ;
+    rdfs:label "Maximum Typical Age" ;
+    rdfs:comment "Maximum typical age of the population within the dataset" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:integer .
+
+
+healthdcatap:populationCoverage a owl:DatatypeProperty ;
+    rdfs:label "Population coverage" ;
+    rdfs:comment "A definition of the population within the dataset" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+
+dcat:inSeries a owl:ObjectProperty ;
+    rdfs:label "In Series" ;
+    rdfs:comment "A dataset series of which the dataset is part." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:DatasetSeries ;
+    rdfs:seeAlso <https://www.w3.org/ns/dcat#inSeries> .
+
+
+healthdcatap:numberOfUniqueIndividuals a owl:DatatypeProperty ;
+    rdfs:label "Number of records for unique individuals." ;
+    rdfs:comment "Number of records for unique individuals [described by the dataset]." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:integer .
+
+
+
+skos:note a owl:DatatypeProperty ;
+    rdfs:label "Notes" ;
+    rdfs:comment "Any additonal informal information about the dataset or indicator" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "SKOS" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso skos:note .
+
+
+phd: a owl:Ontology ;
+    rdfs:label "Population Health Datasets Ontology" ;
+    rdfs:comment "An ontology for descibing population health dataset, created during the Older Adult Health and Wellbeing Profile project." ;
+    dcterms:title "Population Health Datasets Ontology (phd)" ;
+    dcterms:description "An ontology for describing population health datasets and their metadata. It aligns with DCAT, Dublin Core, and related standards, and extends them with additional terms needed for population health planning and analysis." ;
+
+
+    owl:versionInfo "0.1" ;
+    dcterms:issued "2025-04-25"^^xsd:date ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+
+    dcterms:creator "Rob Brennan" ;
+    dcterms:contributor "Junli Liang" ;
+    dcterms:contributor "Huan Chen" ;
+
+    dcterms:source <https://openreview.net/pdf?id=JMWarUh56o> ;
+    rdfs:seeAlso <https://openreview.net/pdf?id=JMWarUh56o> .
