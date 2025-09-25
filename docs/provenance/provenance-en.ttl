@@ -7,8 +7,10 @@
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 .
-:agent0 a prov:Agent; foaf:name "Haula Galadima".
-:agent1 a prov:Agent; foaf:name "Junli Liang".
-:agent2 a prov:Agent; foaf:name "Rob Brennan".
+:agent0 a prov:Agent; foaf:name "Rob Brennan".
+:agent1 a prov:Agent; foaf:name " Junli Liang".
+:agent2 a prov:Agent; foaf:name " Haula Galadima".
+:agent3 a prov:Agent; foaf:name " Huan Chen".

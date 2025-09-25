@@ -1,16 +1,25 @@
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/2002/07/owl#versionIRI> <https://github.com/hse-ucd/hse-ontology/blob/main/phi-ontology.ttl> .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/contributor> "Haula Galadima" .
+<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/contributor> "Huan Chen" .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/contributor> "Junli Liang" .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
+<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/creator> "Rob Brennan" .
+<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/description> "An ontology for describing population health datasets and their metadata. It aligns with DCAT, Dublin Core, and related standards, and extends them with additional terms needed for population health planning and analysis." .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/description> "Ontology for modeling population health indicators based on health DCAT-AP data catalogue" .
+<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/issued> "2025-04-25"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/issued> "2025-08-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/modified> "2025-08-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/modified> "2025-09-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/source> <https://openreview.net/pdf?id=JMWarUh56o> .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
+<https://hse.ie/data/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for descibing population health dataset, created during the Older Adult Health and Wellbeing Profile project." .
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project." .
+<https://hse.ie/data/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#label> "Population Health Datasets Ontology" .
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#label> "Population Health Indicator Ontology" .
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://openreview.net/pdf?id=JMWarUh56o> .
+<https://hse.ie/data/ontology/phi#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1" .
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
 # 
 # 
@@ -72,6 +81,20 @@
 # http://www.w3.org/2002/07/owl#sameAs
 <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# https://hse.ie/data/ontology/phd#applicableLegislation
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Resource> .
+<http://www.w3.org/ns/dcat#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://purl.org/dc/terms/contributor> "Huan Chen" .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://purl.org/dc/terms/created> "2025-04-25"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://purl.org/dc/terms/creator> "Rob Brennan" .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://purl.org/dc/terms/modified> "2025-09-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://purl.org/dc/terms/source> "DCAT3" .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://www.w3.org/2000/01/rdf-schema#comment> "The legislation that mandates the creation or management of the Dataset." .
+<https://hse.ie/data/ontology/phd#applicableLegislation> <http://www.w3.org/2000/01/rdf-schema#label> "Applicable Legislation" .
+# 
 # https://hse.ie/data/ontology/phi#accrualPeriodicity
 <https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://hse.ie/data/ontology/phi#accrualPeriodicity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/accrualPeriodicity> .
@@ -89,7 +112,6 @@
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> .
-<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/creator> "Rob" .
 <https://hse.ie/data/ontology/phi#denominatorSource> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -107,7 +129,7 @@
 <https://hse.ie/data/ontology/phi#domain> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#domain> <http://www.w3.org/2000/01/rdf-schema#comment> "The high-level category the indicator falls under (e.g. Demography)." .
 <https://hse.ie/data/ontology/phi#domain> <http://www.w3.org/2000/01/rdf-schema#label> "Domain" .
-<https://hse.ie/data/ontology/phi#domain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://healthdcat-ap.github.io/#DatasethealthTheme> .
+<https://hse.ie/data/ontology/phi#domain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://healthdcat-ap.github.iohealthTheme> .
 # 
 # https://hse.ie/data/ontology/phi#indicatorType
 <https://hse.ie/data/ontology/phi#indicatorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -131,10 +153,18 @@
 <https://hse.ie/data/ontology/phi#numeratorSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list." .
 <https://hse.ie/data/ontology/phi#numeratorSource> <http://www.w3.org/2000/01/rdf-schema#label> "Numerator Source Dataset" .
 # 
-# https://hse.ie/data/ontology/phi#sameAs
-<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#sameAs> .
-<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
+# https://hse.ie/data/ontology/phi#otherIdentifier
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#sameAs> .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://hse.ie/data/ontology/phi#Indicator> .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://purl.org/dc/terms/creator> "Rob" .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Alternative identifiers for this indicator from other data publishers or coding schemes (as URIs)" .
+<https://hse.ie/data/ontology/phi#otherIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Other Identifiers" .
 # 
 # https://hse.ie/data/ontology/phi#status
 <https://hse.ie/data/ontology/phi#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -158,7 +188,7 @@
 <https://hse.ie/data/ontology/phi#subdomain> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
 <https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/2000/01/rdf-schema#comment> "A more specific category under the domain (e.g. Population numbers)." .
 <https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/2000/01/rdf-schema#label> "Subdomain" .
-<https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://healthdcat-ap.github.io/#DatasethealthTheme> .
+<https://hse.ie/data/ontology/phi#subdomain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://healthdcat-ap.github.iohealthTheme> .
 # 
 # 
 # 
@@ -186,6 +216,31 @@
 # 
 # http://www.w3.org/2004/02/skos/core#note
 <http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://hse.ie/data/ontology/phd#hasCodingScheme
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://purl.org/dc/terms/contributor> "Huan Chen" .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://purl.org/dc/terms/created> "2025-04-25"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://purl.org/dc/terms/creator> "Rob Brennan" .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://purl.org/dc/terms/modified> "2025-09-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://purl.org/dc/terms/source> "DCAT3" .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)" .
+<https://hse.ie/data/ontology/phd#hasCodingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Has Coding Scheme" .
+# 
+# https://hse.ie/data/ontology/phd#status
+<https://hse.ie/data/ontology/phd#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://hse.ie/data/ontology/phd#status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<https://hse.ie/data/ontology/phd#status> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://hse.ie/data/ontology/phd#status> <http://purl.org/dc/terms/contributor> "Huan Chen" .
+<https://hse.ie/data/ontology/phd#status> <http://purl.org/dc/terms/created> "2025-04-25"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phd#status> <http://purl.org/dc/terms/creator> "Rob Brennan" .
+<https://hse.ie/data/ontology/phd#status> <http://purl.org/dc/terms/modified> "2025-09-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phd#status> <http://purl.org/dc/terms/source> "PHD" .
+<https://hse.ie/data/ontology/phd#status> <http://www.w3.org/2000/01/rdf-schema#comment> "An internal prioritisation process status for the dataset or indicator" .
+<https://hse.ie/data/ontology/phd#status> <http://www.w3.org/2000/01/rdf-schema#label> "Status" .
+<https://hse.ie/data/ontology/phd#status> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status> .
 # 
 # https://hse.ie/data/ontology/phi#definition
 <https://hse.ie/data/ontology/phi#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -324,10 +379,6 @@
 <https://hse.ie/data/ontology/phi#rationale> <http://www.w3.org/2000/01/rdf-schema#comment> "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators." .
 <https://hse.ie/data/ontology/phi#rationale> <http://www.w3.org/2000/01/rdf-schema#label> "Rationale" .
 # 
-# https://hse.ie/data/ontology/phi#sameAs
-<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-# 
 # https://hse.ie/data/ontology/phi#title
 <https://hse.ie/data/ontology/phi#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://hse.ie/data/ontology/phi#title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/title> .
@@ -360,9 +411,25 @@
 # #################################################################
 # 
 # 
+# http://www.w3.org/2000/01/rdf-schema#Resource
+# 
 # http://www.w3.org/2004/02/skos/core#Concept
 # 
 # http://www.w3.org/ns/dcat#Dataset
+# 
+# http://www.w3.org/ns/dcat#Resource
+# 
+# https://hse.ie/data/ontology/phd#Dataset
+<https://hse.ie/data/ontology/phd#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://hse.ie/data/ontology/phd#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
+<https://hse.ie/data/ontology/phd#Dataset> <http://purl.org/dc/terms/contributor> "Huan Chen" .
+<https://hse.ie/data/ontology/phd#Dataset> <http://purl.org/dc/terms/created> "2025-04-25"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phd#Dataset> <http://purl.org/dc/terms/creator> "Rob Brennan" .
+<https://hse.ie/data/ontology/phd#Dataset> <http://purl.org/dc/terms/modified> "2025-09-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://hse.ie/data/ontology/phd#Dataset> <http://purl.org/dc/terms/source> "DCAT3" .
+<https://hse.ie/data/ontology/phd#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of data, published or curated by a single agent, and available for access or download in one or more serializations or formats" .
+<https://hse.ie/data/ontology/phd#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+<https://hse.ie/data/ontology/phd#Dataset> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset> .
 # 
 # https://hse.ie/data/ontology/phi#Indicator
 <https://hse.ie/data/ontology/phi#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -382,24 +449,12 @@
 # #################################################################
 # 
 # 
+# https://hse.ie/data/ontology/phd#
+<https://hse.ie/data/ontology/phd#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://hse.ie/data/ontology/phd#> <http://purl.org/dc/terms/title> "Population Health Datasets Ontology (phd)" .
+# 
 # https://hse.ie/data/ontology/phi#
 <https://hse.ie/data/ontology/phi#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://hse.ie/data/ontology/phi#> <http://purl.org/dc/terms/title> "Population Health Indicator Ontology" .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-<https://hse.ie/data/ontology/phi#sameAs> <http://purl.org/dc/terms/created> "2025-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#sameAs> <http://purl.org/dc/terms/creator> "Rob" .
-<https://hse.ie/data/ontology/phi#sameAs> <http://purl.org/dc/terms/modified> "2025-08-29"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://hse.ie/data/ontology/phi#sameAs> <http://purl.org/dc/terms/source> "OAHP Data Catalogue Schema Proposal v05.13" .
-<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of alterative identifiers for this indicator from other data publishers or coding schemes, e.g. CSO statistic identifier URL" .
-<https://hse.ie/data/ontology/phi#sameAs> <http://www.w3.org/2000/01/rdf-schema#label> "Other Identifiers" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

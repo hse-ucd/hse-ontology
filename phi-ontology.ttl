@@ -8,6 +8,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix healthdcatap: <https://healthdcat-ap.github.io> .
+@prefix phd: <https://hse.ie/data/ontology/phd#> .
 
 # Main Ontology
 phi:Indicator a owl:Class ;
@@ -274,3 +275,66 @@ phi: a owl:Ontology ;
 
     # License
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+
+phd:Dataset a rdfs:Class ;
+    rdfs:label "Dataset" ;
+    rdfs:comment "Collection of data, published or curated by a single agent, and available for access or download in one or more serializations or formats" ;
+    rdfs:subClassOf dcat:Dataset;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset> .
+
+phd:status a owl:DatatypeProperty ;
+    rdfs:label "Status" ;
+    rdfs:comment "An internal prioritisation process status for the dataset or indicator" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "PHD" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string ;
+    rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status> .
+
+phd:applicableLegislation a owl:ObjectProperty ;
+    rdfs:label "Applicable Legislation" ;
+    rdfs:comment "The legislation that mandates the creation or management of the Dataset." ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Resource .
+
+phd:hasCodingScheme a owl:DatatypeProperty ;
+    rdfs:label "Has Coding Scheme" ;
+    rdfs:comment "Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)" ;
+    dcterms:contributor "Huan Chen" ;
+    dcterms:created "2025-04-25"^^xsd:date ;
+    dcterms:creator "Rob Brennan" ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+    dcterms:source "DCAT3" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range xsd:string .
+
+phd: a owl:Ontology ;
+    rdfs:label "Population Health Datasets Ontology" ;
+    rdfs:comment "An ontology for descibing population health dataset, created during the Older Adult Health and Wellbeing Profile project." ;
+    dcterms:title "Population Health Datasets Ontology (phd)" ;
+    dcterms:description "An ontology for describing population health datasets and their metadata. It aligns with DCAT, Dublin Core, and related standards, and extends them with additional terms needed for population health planning and analysis." ;
+
+
+    owl:versionInfo "0.1" ;
+    dcterms:issued "2025-04-25"^^xsd:date ;
+    dcterms:modified "2025-09-11"^^xsd:date ;
+
+    dcterms:creator "Rob Brennan" ;
+    dcterms:contributor "Junli Liang" ;
+    dcterms:contributor "Huan Chen" ;
+
+    dcterms:source <https://openreview.net/pdf?id=JMWarUh56o> ;
+    rdfs:seeAlso <https://openreview.net/pdf?id=JMWarUh56o> .
