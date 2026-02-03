@@ -1,0 +1,25 @@
+# Jekyll configuration (only needed if using Jekyll)
+
+title: HSE Population Health Ontology
+description: Ontology for population health indicators and datasets
+baseurl: "" # if your site is at username.github.io/repository use "/repository"
+url: "https://hse-ucd.github.io/hse-ontology"
+
+# Exclude files from Jekyll processing
+exclude:
+  - .git/
+  - .github/
+  - mappings/
+  - README.md
+  - LICENSE
+
+# Include the ontology documentation directory
+include:
+  - ontology_v101
+
+# Don't process ontology files
+defaults:
+  - scope:
+      path: "ontology_v101"
+    values:
+      sitemap: false

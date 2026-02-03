@@ -31,6 +31,7 @@ https://hse-ucd.github.io/hse-ontology/
 ```
 
 Or if you have a custom domain configured:
+
 ```
 https://your-custom-domain.com/
 ```
@@ -38,6 +39,7 @@ https://your-custom-domain.com/
 ## Automatic Deployment
 
 The workflow (`.github/workflows/deploy-pages.yml`) automatically triggers when:
+
 - You push changes to the `main` branch that affect:
   - `ontology_v101/` directory
   - `docs/` directory
@@ -80,7 +82,7 @@ Edit `.github/workflows/deploy-pages.yml` and change the `path`:
 - name: Upload artifact
   uses: actions/upload-pages-artifact@v3
   with:
-    path: './docs'  # Change this to your desired directory
+    path: "./docs" # Change this to your desired directory
 ```
 
 ### Deploy Multiple Directories
@@ -97,7 +99,7 @@ You can copy files to a staging directory before deployment:
 - name: Upload artifact
   uses: actions/upload-pages-artifact@v3
   with:
-    path: './_site'
+    path: "./_site"
 ```
 
 ### Custom Domain
@@ -105,6 +107,7 @@ You can copy files to a staging directory before deployment:
 To use a custom domain:
 
 1. Add a `CNAME` file to `ontology_v101/` with your domain:
+
    ```
    ontology.hse.ie
    ```
@@ -117,6 +120,7 @@ To use a custom domain:
 ### Workflow Fails
 
 Check the **Actions** tab for error messages. Common issues:
+
 - GitHub Pages not enabled in repository settings
 - Insufficient permissions (check workflow `permissions` section)
 - Invalid file paths
@@ -136,6 +140,7 @@ Check the **Actions** tab for error messages. Common issues:
 ## Monitoring Deployments
 
 View deployment status:
+
 - **Actions** tab: See workflow runs and logs
 - **Deployments** section (right sidebar): Track deployment history
 - Check commit status badges for deployment status
