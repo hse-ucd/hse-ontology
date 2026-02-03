@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main # Change to 'master' if that's your default branch
-    paths:
-      - "ontology_v101/**"
-      - "docs/**"
-      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch: # Allows manual trigger
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
