@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://hse.ie/ontology/phd#"
-     xml:base="https://hse.ie/ontology/phd"
+<rdf:RDF xmlns="https://hse.ie/ontology/phi#"
+     xml:base="https://hse.ie/ontology/phi"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,39 +10,26 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://hse.ie/ontology/phd#">
-        <terms:abstract>The Population Health Datasets Ontology (phd) extends DCAT to describe health datasets and their metadata, including data governance, coding schemes, and applicable legislation for population health planning and analysis.</terms:abstract>
+    <owl:Ontology rdf:about="https://hse.ie/ontology/phi#">
+        <owl:versionIRI rdf:resource="https://github.com/hse-ucd/hse-ontology/blob/main/phi-ontology.ttl"/>
         <terms:abstract>The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project.</terms:abstract>
-        <terms:bibliographicCitation>Brennan, R., Liang, J., Chen, H. (2025). Population Health Datasets Ontology. Health Service Executive &amp; ADAPT Centre, UCD. https://hse.ie/ontology/phd</terms:bibliographicCitation>
         <terms:bibliographicCitation>Brennan, R., Liang, J., Galadima, H. (2025). Population Health Indicator Ontology. Health Service Executive &amp; ADAPT Centre, UCD. https://hse.ie/ontology/phi</terms:bibliographicCitation>
         <terms:contributor>Haula Galadima, ADAPT UCD</terms:contributor>
-        <terms:contributor>Huan Chen</terms:contributor>
         <terms:contributor>Junli Liang, ADAPT UCD</terms:contributor>
         <terms:contributor>Rob Brennan, ADAPT UCD</terms:contributor>
-        <terms:creator>Rob Brennan, ADAPT UCD</terms:creator>
-        <terms:description>An ontology for describing population health datasets and their metadata. It aligns with DCAT, Dublin Core, and related standards, and extends them with additional terms needed for population health planning and analysis.</terms:description>
-        <terms:description>Ontology for modeling population health indicators based on health DCAT-AP data catalogue</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-25</terms:issued>
+        <terms:description>Ontology for modeling population health indicators and datasets based on health DCAT-AP data catalogue</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-20</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-11</terms:modified>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-03</terms:modified>
         <terms:publisher>Health Service Executive (HSE) &amp; ADAPT Centre, University College Dublin</terms:publisher>
-        <terms:rights>Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD).</terms:rights>
         <terms:rights>Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD). This work is licensed under a Creative Commons Attribution 4.0 International License.</terms:rights>
-        <terms:source rdf:resource="https://openreview.net/pdf?id=JMWarUh56o"/>
         <terms:source>OAHP Data Catalogue Schema Proposal v05.13</terms:source>
         <bibo:status>Draft</bibo:status>
-        <vann:preferredNamespacePrefix>phd</vann:preferredNamespacePrefix>
         <vann:preferredNamespacePrefix>phi</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://hse.ie/ontology/phd#</vann:preferredNamespaceUri>
         <vann:preferredNamespaceUri>https://hse.ie/ontology/phi#</vann:preferredNamespaceUri>
-        <rdfs:comment>An ontology for descibing population health dataset, created during the Older Adult Health and Wellbeing Profile project.</rdfs:comment>
-        <rdfs:comment>An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project.</rdfs:comment>
-        <rdfs:label>Population Health Datasets Ontology</rdfs:label>
+        <rdfs:comment>An ontology for describing population health indicators and datasets, created during the Older Adult Health and Wellbeing Profile project.</rdfs:comment>
         <rdfs:label>Population Health Indicator Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://openreview.net/pdf?id=JMWarUh56o"/>
-        <owl:priorVersion rdf:resource="https://hse.ie/ontology/phd/1.0"/>
         <owl:priorVersion rdf:resource="https://hse.ie/ontology/phi/1.0"/>
         <owl:versionInfo>1.0.1</owl:versionInfo>
         <foaf:homepage rdf:resource="https://github.com/hse-ucd/hse-ontology"/>
@@ -790,15 +777,6 @@
      -->
 
 
-    
-
-
-    <!-- https://hse.ie/ontology/phd# -->
-
-
-    <owl:NamedIndividual rdf:about="https://hse.ie/ontology/phd#">
-        <terms:title>Population Health Datasets Ontology (phd)</terms:title>
-    </owl:NamedIndividual>
     
 
 
