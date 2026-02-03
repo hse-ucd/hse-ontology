@@ -1,0 +1,4 @@
+URI,Label,Comment,SubClassOf,Source,Creator,Contributor,Created,Modified,SeeAlso
+Indicator,Indicator,A population health indicator that measures specific aspects of health and wellbeing.,,OAHP Data Catalogue Schema Proposal v05.13,"Rob Brennan, ADAPT UCD",,2025-08-18,2025-08-29,
+Dataset,Dataset,Collection of data published or curated by a single agent and available for access or download in one or more serializations or formats,https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset,DCAT3,"Rob Brennan, ADAPT UCD","Huan Chen, ADAPT UCD",2025-04-25,2025-09-11,https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset
+IndicatorGroup,Indicator Group,A grouping of related health profile indicators.,,OAHP Data Catalogue Schema Proposal v05.13,"Rob Brennan, ADAPT UCD","Junli Liang, ADAPT UCD",2026-02-03,2026-02-03,

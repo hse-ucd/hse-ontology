@@ -1,0 +1,546 @@
+@base <http://hse.ie/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix : <http://hse.ie/> .
+@prefix phi: <https://hse.ie/ontology/phi#> .
+@prefix phd: <https://hse.ie/ontology/phd#> .
+@prefix phpt: <https://hse.ie/terminology/phpt#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+
+<#ClassesMapping>
+  rml:logicalSource [
+    rml:source "classes.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://hse.ie/ontology/phi#{URI}" ;
+    rr:class rdfs:Class
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "Label" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rml:reference "Comment" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:subClassOf ;
+    rr:objectMap [ 
+      rml:reference "SubClassOf" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:source ;
+    rr:objectMap [ rml:reference "Source" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:creator ;
+    rr:objectMap [ rml:reference "Creator" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rml:reference "Contributor" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:created ;
+    rr:objectMap [ 
+      rml:reference "Created" ;
+      rr:datatype <http://www.w3.org/2001/XMLSchema#date>
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:modified ;
+    rr:objectMap [ 
+      rml:reference "Modified" ;
+      rr:datatype <http://www.w3.org/2001/XMLSchema#date>
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ 
+      rml:reference "SeeAlso" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+
+
+# Static Ontology Metadata for phi: ontology
+<#PhiOntologyMetadata>
+  rml:logicalSource [
+    rml:source "classes.csv" ;
+    rml:referenceFormulation ql:CSV ;
+    rml:iterator "$"
+  ] ;
+
+  rr:subjectMap [
+    rr:constant <https://hse.ie/ontology/phi#> ;
+    rr:class owl:Ontology
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:constant "Population Health Indicator Ontology" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rr:constant "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project." ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:title ;
+    rr:objectMap [ rr:constant "Population Health Indicator Ontology" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:description ;
+    rr:objectMap [ rr:constant "Ontology for modeling population health indicators based on health DCAT-AP data catalogue" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate owl:versionInfo ;
+    rr:objectMap [ rr:constant "1.0.1" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate owl:versionIRI ;
+    rr:objectMap [ 
+      rr:constant <https://github.com/hse-ucd/hse-ontology/blob/main/phi-ontology.ttl> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:issued ;
+    rr:objectMap [ 
+      rr:constant "2025-08-20" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:modified ;
+    rr:objectMap [ 
+      rr:constant "2026-02-03" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rr:constant "Rob Brennan, ADAPT UCD" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rr:constant "Junli Liang, ADAPT UCD" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rr:constant "Haula Galadima, ADAPT UCD" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:source ;
+    rr:objectMap [ rr:constant "OAHP Data Catalogue Schema Proposal v05.13" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ 
+      rr:constant <https://openreview.net/pdf?id=JMWarUh56o> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:license ;
+    rr:objectMap [ 
+      rr:constant <https://creativecommons.org/licenses/by/4.0/> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:rights ;
+    rr:objectMap [ rr:constant "Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD). This work is licensed under a Creative Commons Attribution 4.0 International License." ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:abstract ;
+    rr:objectMap [ rr:constant "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project." ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:publisher ;
+    rr:objectMap [ rr:constant "Health Service Executive (HSE) & ADAPT Centre, University College Dublin" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate vann:preferredNamespacePrefix ;
+    rr:objectMap [ rr:constant "phi" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate vann:preferredNamespaceUri ;
+    rr:objectMap [ rr:constant "https://hse.ie/ontology/phi#" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate owl:priorVersion ;
+    rr:objectMap [ 
+      rr:constant <https://hse.ie/ontology/phi/1.0> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate bibo:status ;
+    rr:objectMap [ rr:constant "Draft" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate foaf:homepage ;
+    rr:objectMap [ 
+      rr:constant <https://github.com/hse-ucd/hse-ontology> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:bibliographicCitation ;
+    rr:objectMap [ rr:constant "Brennan, R., Liang, J., Galadima, H. (2025). Population Health Indicator Ontology. Health Service Executive & ADAPT Centre, UCD. https://hse.ie/ontology/phi" ]
+  ] .
+
+# Static Ontology Metadata for phd: ontology
+<#PhdOntologyMetadata>
+  rml:logicalSource [
+    rml:source "classes.csv" ;
+    rml:referenceFormulation ql:CSV ;
+    rml:iterator "$"
+  ] ;
+
+  rr:subjectMap [
+    rr:constant <https://hse.ie/ontology/phd#> ;
+    rr:class owl:Ontology
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rr:constant "Population Health Datasets Ontology" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rr:constant "An ontology for descibing population health dataset, created during the Older Adult Health and Wellbeing Profile project." ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:title ;
+    rr:objectMap [ rr:constant "Population Health Datasets Ontology (phd)" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:description ;
+    rr:objectMap [ rr:constant "An ontology for describing population health datasets and their metadata. It aligns with DCAT, Dublin Core, and related standards, and extends them with additional terms needed for population health planning and analysis." ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:rights ;
+    rr:objectMap [ rr:constant "Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD)." ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:abstract ;
+    rr:objectMap [ rr:constant "The Population Health Datasets Ontology (phd) extends DCAT to describe health datasets and their metadata, including data governance, coding schemes, and applicable legislation for population health planning and analysis." ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:publisher ;
+    rr:objectMap [ rr:constant "Health Service Executive (HSE) & ADAPT Centre, University College Dublin" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate vann:preferredNamespacePrefix ;
+    rr:objectMap [ rr:constant "phd" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate vann:preferredNamespaceUri ;
+    rr:objectMap [ rr:constant "https://hse.ie/ontology/phd#" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate owl:priorVersion ;
+    rr:objectMap [ 
+      rr:constant <https://hse.ie/ontology/phd/1.0> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate bibo:status ;
+    rr:objectMap [ rr:constant "Draft" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate foaf:homepage ;
+    rr:objectMap [ 
+      rr:constant <https://github.com/hse-ucd/hse-ontology> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:bibliographicCitation ;
+    rr:objectMap [ rr:constant "Brennan, R., Liang, J., Chen, H. (2025). Population Health Datasets Ontology. Health Service Executive & ADAPT Centre, UCD. https://hse.ie/ontology/phd" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate owl:versionInfo ;
+    rr:objectMap [ rr:constant "1.0.1" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:issued ;
+    rr:objectMap [ 
+      rr:constant "2025-04-25" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:modified ;
+    rr:objectMap [ 
+      rr:constant "2025-09-11" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:creator ;
+    rr:objectMap [ rr:constant "Rob Brennan, ADAPT UCD" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rr:constant "Junli Liang, ADAPT UCD" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rr:constant "Huan Chen" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:source ;
+    rr:objectMap [ 
+      rr:constant <https://openreview.net/pdf?id=JMWarUh56o> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ 
+      rr:constant <https://openreview.net/pdf?id=JMWarUh56o> ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+# DatatypeProperty Mapping
+<#DatatypePropertiesMapping>
+  rml:logicalSource [
+    rml:source "datatype_properties.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rml:reference "URI" ;
+    rr:termType rr:IRI ;
+    rr:class owl:DatatypeProperty
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "Label" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rml:reference "Comment" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:subPropertyOf ;
+    rr:objectMap [ 
+      rml:reference "SubPropertyOf" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:domain ;
+    rr:objectMap [ 
+      rml:reference "Domain" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:range ;
+    rr:objectMap [ 
+      rml:reference "Range" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:source ;
+    rr:objectMap [ rml:reference "Source" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:creator ;
+    rr:objectMap [ rml:reference "Creator" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rml:reference "Contributor" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:created ;
+    rr:objectMap [ 
+      rml:reference "Created" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:modified ;
+    rr:objectMap [ 
+      rml:reference "Modified" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ 
+      rml:reference "SeeAlso" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+# ObjectProperty Mapping
+<#ObjectPropertiesMapping>
+  rml:logicalSource [
+    rml:source "object_properties.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rml:reference "URI" ;
+    rr:termType rr:IRI ;
+    rr:class owl:ObjectProperty
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "Label" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rml:reference "Comment" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:subPropertyOf ;
+    rr:objectMap [ 
+      rml:reference "SubPropertyOf" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:domain ;
+    rr:objectMap [ 
+      rml:reference "Domain" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:range ;
+    rr:objectMap [ 
+      rml:reference "Range" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:source ;
+    rr:objectMap [ rml:reference "Source" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:creator ;
+    rr:objectMap [ rml:reference "Creator" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rml:reference "Contributor" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:created ;
+    rr:objectMap [ 
+      rml:reference "Created" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:modified ;
+    rr:objectMap [ 
+      rml:reference "Modified" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ 
+      rml:reference "SeeAlso" ;
+      rr:termType rr:IRI
+    ]
+  ] .
