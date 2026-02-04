@@ -3,6 +3,7 @@
 <https://hse.ie/ontology/phi#> <http://purl.org/dc/terms/abstract> "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)" .
 <https://hse.ie/ontology/phi#> <http://purl.org/dc/terms/bibliographicCitation> "Rob Brennan, Junli Liang and Akila Wickramasekara, , Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf" .
 <https://hse.ie/ontology/phi#> <http://purl.org/dc/terms/contributor> "Haula Galadima, ADAPT UCD" .
+<https://hse.ie/ontology/phi#> <http://purl.org/dc/terms/contributor> "Huan Chen, UCD" .
 <https://hse.ie/ontology/phi#> <http://purl.org/dc/terms/contributor> "Junli Liang, ADAPT UCD" .
 <https://hse.ie/ontology/phi#> <http://purl.org/dc/terms/contributor> "Rob Brennan, ADAPT UCD" .
 <https://hse.ie/ontology/phi#> <http://purl.org/dc/terms/description> "Ontology for modeling population health indicators based on health DCAT-AP data catalogue" .
@@ -18,7 +19,7 @@
 <https://hse.ie/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project." .
 <https://hse.ie/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#label> "Population Health Indicator Ontology" .
 <https://hse.ie/ontology/phi#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://openreview.net/pdf?id=JMWarUh56o> .
-<https://hse.ie/ontology/phi#> <http://www.w3.org/2002/07/owl#priorVersion> <https://hse.ie/ontology/phi/1.0> .
+<https://hse.ie/ontology/phi#> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/hse-ucd/hse-ontology/ontology_v100/> .
 <https://hse.ie/ontology/phi#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.1" .
 <https://hse.ie/ontology/phi#> <http://xmlns.com/foaf/0.1/homepage> <https://github.com/hse-ucd/hse-ontology> .
 # 

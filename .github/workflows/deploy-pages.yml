@@ -38,8 +38,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload the ontology_v101 directory
-          path: "./ontology_v101"
+          # Upload entire repository to support multiple versions and symlinks
+          path: "."
 
       - name: Deploy to GitHub Pages
         id: deployment

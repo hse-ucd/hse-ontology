@@ -196,6 +196,8 @@
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Haula Galadima, ADAPT UCD"
   }, {
+    "@value" : "Huan Chen, UCD"
+  }, {
     "@value" : "Junli Liang, ADAPT UCD"
   }, {
     "@value" : "Rob Brennan, ADAPT UCD"
@@ -245,7 +247,7 @@
     "@id" : "https://openreview.net/pdf?id=JMWarUh56o"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://hse.ie/ontology/phi/1.0"
+    "@id" : "https://github.com/hse-ucd/hse-ontology/ontology_v100/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://github.com/hse-ucd/hse-ontology/blob/main/phi-ontology.ttl"
