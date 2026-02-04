@@ -68,7 +68,7 @@ phd:status a owl:DatatypeProperty;
   rdfs:comment "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project.";
   rdfs:label "Population Health Indicator Ontology";
   rdfs:seeAlso <https://openreview.net/pdf?id=JMWarUh56o>;
-  owl:priorVersion <https://github.com/hse-ucd/hse-ontology/ontology_v100/>;
+  owl:priorVersion <https://github.com/hse-ucd/hse-ontology/blob/main/index.prior-ver.html>;
   owl:versionIRI <https://github.com/hse-ucd/hse-ontology/blob/main/phi-ontology.ttl>;
   owl:versionInfo "1.0.1";
   foaf:homepage <https://github.com/hse-ucd/hse-ontology> .

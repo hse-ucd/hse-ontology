@@ -219,7 +219,7 @@
   rr:predicateObjectMap [
     rr:predicate owl:priorVersion ;
     rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology/ontology_v100/> ;
+      rr:constant <https://github.com/hse-ucd/hse-ontology/blob/main/index.prior-ver.html> ;
       rr:termType rr:IRI
     ]
   ] ;

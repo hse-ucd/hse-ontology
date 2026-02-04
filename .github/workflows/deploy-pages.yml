@@ -29,8 +29,8 @@ jobs:
 
       - name: Add cache-busting timestamp
         run: |
-          echo "Deployment timestamp: $(date)" > ./ontology_v101/DEPLOY_INFO.txt
-          echo "Commit: ${{ github.sha }}" >> ./ontology_v101/DEPLOY_INFO.txt
+          echo "Deployment timestamp: $(date)" > ./current/DEPLOY_INFO.txt
+          echo "Commit: ${{ github.sha }}" >> ./current/DEPLOY_INFO.txt
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -38,8 +38,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository to support multiple versions and symlinks
-          path: "."
+          # Deploy current version as root
+          path: "./current"
 
       - name: Deploy to GitHub Pages
         id: deployment
