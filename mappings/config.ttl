@@ -193,12 +193,12 @@
 
   rr:predicateObjectMap [
     rr:predicate dcterms:abstract ;
-    rr:objectMap [ rr:constant "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project." ]
+    rr:objectMap [ rr:constant "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)" ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate dcterms:publisher ;
-    rr:objectMap [ rr:constant "Health Service Executive (HSE) & ADAPT Centre, University College Dublin" ]
+    rr:objectMap [ rr:constant "ADAPT Centre, University College Dublin" ]
   ] ;
 
   rr:predicateObjectMap [
@@ -234,7 +234,7 @@
 
   rr:predicateObjectMap [
     rr:predicate dcterms:bibliographicCitation ;
-    rr:objectMap [ rr:constant "Brennan, R., Liang, J., Galadima, H. (2025). Population Health Indicator Ontology. Health Service Executive & ADAPT Centre, UCD. https://hse.ie/ontology/phi" ]
+    rr:objectMap [ rr:constant "Rob Brennan, Junli Liang and Akila Wickramasekara, , Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf" ]
   ] .
 
 # Static Ontology Metadata for phd: ontology
@@ -277,12 +277,12 @@
 
   rr:predicateObjectMap [
     rr:predicate dcterms:abstract ;
-    rr:objectMap [ rr:constant "The Population Health Datasets Ontology (phd) extends DCAT to describe health datasets and their metadata, including data governance, coding schemes, and applicable legislation for population health planning and analysis." ]
+    rr:objectMap [ rr:constant "The Population Health Datasets Ontology (phd) extends DCAT to describe health datasets and their metadata, including data governance, coding schemes, and applicable legislation for population health planning and analysis. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)" ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate dcterms:publisher ;
-    rr:objectMap [ rr:constant "Health Service Executive (HSE) & ADAPT Centre, University College Dublin" ]
+    rr:objectMap [ rr:constant "ADAPT Centre, University College Dublin" ]
   ] ;
 
   rr:predicateObjectMap [
@@ -318,7 +318,7 @@
 
   rr:predicateObjectMap [
     rr:predicate dcterms:bibliographicCitation ;
-    rr:objectMap [ rr:constant "Brennan, R., Liang, J., Chen, H. (2025). Population Health Datasets Ontology. Health Service Executive & ADAPT Centre, UCD. https://hse.ie/ontology/phd" ]
+    rr:objectMap [ rr:constant "Rob Brennan, Junli Liang and Akila Wickramasekara, , Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf" ]
   ] ;
 
   rr:predicateObjectMap [
