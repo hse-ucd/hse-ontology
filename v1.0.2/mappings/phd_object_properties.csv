@@ -1,0 +1,2 @@
+ID,Label,Comment,SubPropertyOf,Domain,Range,Source,Creator,Contributor,Created,Modified,SeeAlso
+applicableLegislation,Applicable Legislation,The legislation that mandates the creation or management of the Dataset.,,http://www.w3.org/ns/dcat#Dataset,http://www.w3.org/ns/dcat#Resource,DCAT3,"Rob Brennan, ADAPT UCD","Huan Chen, UCD",2025-04-25,2025-09-11,
