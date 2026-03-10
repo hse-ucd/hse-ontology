@@ -135,6 +135,14 @@
   ] ;
 
   rr:predicateObjectMap [
+    rr:predicate owl:priorVersion ;
+    rr:objectMap [ 
+      rr:constant <https://w3id.org/hse/ontology/phi/1.0.1> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
     rr:predicate dcterms:issued ;
     rr:objectMap [ 
       rr:constant "2025-08-20" ;
@@ -214,14 +222,6 @@
   rr:predicateObjectMap [
     rr:predicate vann:preferredNamespaceUri ;
     rr:objectMap [ rr:constant "https://w3id.org/hse/ontology/phi#" ]
-  ] ;
-
-  rr:predicateObjectMap [
-    rr:predicate owl:priorVersion ;
-    rr:objectMap [ 
-      rr:constant <https://w3id.org/hse/ontology/phi/1.0.1> ;
-      rr:termType rr:IRI
-    ]
   ] ;
 
   rr:predicateObjectMap [
