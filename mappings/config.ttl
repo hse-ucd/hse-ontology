@@ -6,9 +6,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix : <http://hse.ie/> .
-@prefix phi: <https://hse.ie/ontology/phi#> .
-@prefix phd: <https://hse.ie/ontology/phd#> .
-@prefix phpt: <https://hse.ie/terminology/phpt#> .
+@prefix phi: <https://w3id.org/hse/ontology/phi#> .
+@prefix phd: <https://w3id.org/hse/ontology/phd#> .
+@prefix pht: <https://w3id.org/hse/terminology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,7 +25,7 @@
   ] ;
 
   rr:subjectMap [
-    rr:template "https://hse.ie/ontology/phi#{URI}" ;
+    rr:template "https://w3id.org/hse/ontology/phi#{URI}" ;
     rr:class rdfs:Class
   ] ;
 
@@ -97,7 +97,7 @@
   ] ;
 
   rr:subjectMap [
-    rr:constant <https://hse.ie/ontology/phi#> ;
+    rr:constant <https://w3id.org/hse/ontology/phi#> ;
     rr:class owl:Ontology
   ] ;
 
@@ -213,7 +213,7 @@
 
   rr:predicateObjectMap [
     rr:predicate vann:preferredNamespaceUri ;
-    rr:objectMap [ rr:constant "https://hse.ie/ontology/phi#" ]
+    rr:objectMap [ rr:constant "https://w3id.org/hse/ontology/phi#" ]
   ] ;
 
   rr:predicateObjectMap [
@@ -251,7 +251,7 @@
 #   ] ;
 
 #   rr:subjectMap [
-#     rr:constant <https://hse.ie/ontology/phd#> ;
+#     rr:constant <https://w3id.org/hse/ontology/phd#> ;
 #     rr:class owl:Ontology
 #   ] ;
 
@@ -297,7 +297,7 @@
 
 #   rr:predicateObjectMap [
 #     rr:predicate vann:preferredNamespaceUri ;
-#     rr:objectMap [ rr:constant "https://hse.ie/ontology/phd#" ]
+#     rr:objectMap [ rr:constant "https://w3id.org/hse/ontology/phd#" ]
 #   ] ;
 
 #   rr:predicateObjectMap [
@@ -465,14 +465,99 @@
   ] .
 
 # ObjectProperty Mapping
-<#ObjectPropertiesMapping>
+<#PHIObjectPropertiesMapping>
   rml:logicalSource [
-    rml:source "object_properties.csv" ;
+    rml:source "phi_object_properties.csv" ;
     rml:referenceFormulation ql:CSV
   ] ;
 
   rr:subjectMap [
-    rml:reference "URI" ;
+    rml:reference "https://w3id.org/hse/ontology/phi#{URI}" ;
+    rr:termType rr:IRI ;
+    rr:class owl:ObjectProperty
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "Label" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rml:reference "Comment" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:subPropertyOf ;
+    rr:objectMap [ 
+      rml:reference "SubPropertyOf" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:domain ;
+    rr:objectMap [ 
+      rml:reference "Domain" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:range ;
+    rr:objectMap [ 
+      rml:reference "Range" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:source ;
+    rr:objectMap [ rml:reference "Source" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:creator ;
+    rr:objectMap [ rml:reference "Creator" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rml:reference "Contributor" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:created ;
+    rr:objectMap [ 
+      rml:reference "Created" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:modified ;
+    rr:objectMap [ 
+      rml:reference "Modified" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ 
+      rml:reference "SeeAlso" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+<#PHDObjectPropertiesMapping>
+  rml:logicalSource [
+    rml:source "phd_object_properties.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rml:reference "https://w3id.org/hse/ontology/phd#{URI}" ;
     rr:termType rr:IRI ;
     rr:class owl:ObjectProperty
   ] ;
