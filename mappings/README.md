@@ -81,8 +81,8 @@ The generated `output.ttl` file contains:
 The output uses standard prefixes:
 
 ```turtle
-@prefix phi: <https://hse.ie/ontology/phi#> .
-@prefix phd: <https://hse.ie/ontology/phd#> .
+@prefix phi: <https://w3id.org/hse/ontology/phi#> .
+@prefix phd: <https://w3id.org/hse/ontology/phd#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

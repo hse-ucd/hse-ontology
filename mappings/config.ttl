@@ -6,9 +6,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix : <http://hse.ie/> .
-@prefix phi: <https://hse.ie/ontology/phi#> .
-@prefix phd: <https://hse.ie/ontology/phd#> .
-@prefix phpt: <https://hse.ie/terminology/phpt#> .
+@prefix phi: <https://w3id.org/hse/ontology/phi#> .
+@prefix phd: <https://w3id.org/hse/ontology/phd#> .
+@prefix pht: <https://w3id.org/hse/terminology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -25,7 +25,7 @@
   ] ;
 
   rr:subjectMap [
-    rr:template "https://hse.ie/ontology/phi#{URI}" ;
+    rr:template "https://w3id.org/hse/ontology/phi#{URI}" ;
     rr:class rdfs:Class
   ] ;
 
@@ -97,7 +97,7 @@
   ] ;
 
   rr:subjectMap [
-    rr:constant <https://hse.ie/ontology/phi#> ;
+    rr:constant <https://w3id.org/hse/ontology/phi#> ;
     rr:class owl:Ontology
   ] ;
 
@@ -213,7 +213,7 @@
 
   rr:predicateObjectMap [
     rr:predicate vann:preferredNamespaceUri ;
-    rr:objectMap [ rr:constant "https://hse.ie/ontology/phi#" ]
+    rr:objectMap [ rr:constant "https://w3id.org/hse/ontology/phi#" ]
   ] ;
 
   rr:predicateObjectMap [
@@ -251,7 +251,7 @@
 #   ] ;
 
 #   rr:subjectMap [
-#     rr:constant <https://hse.ie/ontology/phd#> ;
+#     rr:constant <https://w3id.org/hse/ontology/phd#> ;
 #     rr:class owl:Ontology
 #   ] ;
 
@@ -297,7 +297,7 @@
 
 #   rr:predicateObjectMap [
 #     rr:predicate vann:preferredNamespaceUri ;
-#     rr:objectMap [ rr:constant "https://hse.ie/ontology/phd#" ]
+#     rr:objectMap [ rr:constant "https://w3id.org/hse/ontology/phd#" ]
 #   ] ;
 
 #   rr:predicateObjectMap [
@@ -472,7 +472,7 @@
   ] ;
 
   rr:subjectMap [
-    rml:reference "https://hse.ie/ontology/phi#{URI}" ;
+    rml:reference "https://w3id.org/hse/ontology/phi#{URI}" ;
     rr:termType rr:IRI ;
     rr:class owl:ObjectProperty
   ] ;
@@ -557,7 +557,7 @@
   ] ;
 
   rr:subjectMap [
-    rml:reference "https://hse.ie/ontology/phd#{URI}" ;
+    rml:reference "https://w3id.org/hse/ontology/phd#{URI}" ;
     rr:termType rr:IRI ;
     rr:class owl:ObjectProperty
   ] ;

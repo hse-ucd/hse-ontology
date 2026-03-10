@@ -5,9 +5,9 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix phd: <https://hse.ie/ontology/phd#> .
-@prefix phi: <https://hse.ie/ontology/phi#> .
-@prefix phpt: <https://hse.ie/terminology/phpt#> .
+@prefix phd: <https://w3id.org/hse/ontology/phd#> .
+@prefix phi: <https://w3id.org/hse/ontology/phi#> .
+@prefix pht: <https://w3id.org/hse/terminology#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rml: <http://w3id.org/rml/> .
@@ -49,7 +49,7 @@ phd:status a owl:DatatypeProperty;
   rdfs:range xsd:string;
   rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status> .
 
-<https://hse.ie/ontology/phi#> a owl:Ontology;
+<https://w3id.org/hse/ontology/phi#> a owl:Ontology;
   dcterms:abstract "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)";
   dcterms:bibliographicCitation "Rob Brennan, Junli Liang and Akila Wickramasekara, , Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf";
   dcterms:contributor "Haula Galadima, ADAPT UCD", "Huan Chen, UCD", "Junli Liang, ADAPT UCD",
@@ -64,7 +64,7 @@ phd:status a owl:DatatypeProperty;
   dcterms:title "Population Health Indicator Ontology";
   bibo:status "Draft";
   vann:preferredNamespacePrefix "phi";
-  vann:preferredNamespaceUri "https://hse.ie/ontology/phi#";
+  vann:preferredNamespaceUri "https://w3id.org/hse/ontology/phi#";
   rdfs:comment "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project.";
   rdfs:label "Population Health Indicator Ontology";
   rdfs:seeAlso <https://openreview.net/pdf?id=JMWarUh56o>;
