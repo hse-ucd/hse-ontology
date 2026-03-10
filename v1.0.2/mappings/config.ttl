@@ -1,11 +1,11 @@
-@base <https://w3id.org/hse/ontology/> .
+@base <https://w3id.org/hse/> .
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix : <https://w3id.org/hse/ontology/> .
+@prefix : <https://w3id.org/hse/> .
 @prefix phi: <https://w3id.org/hse/ontology/phi#> .
 @prefix phd: <https://w3id.org/hse/ontology/phd#> .
 @prefix pht: <https://w3id.org/hse/terminology#> .
@@ -123,13 +123,13 @@
 
   rr:predicateObjectMap [
     rr:predicate owl:versionInfo ;
-    rr:objectMap [ rr:constant "1.0.1" ]
+    rr:objectMap [ rr:constant "1.0.2" ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate owl:versionIRI ;
     rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology/blob/main/phi-ontology.ttl> ;
+      rr:constant <https://w3id.org/hse/ontology/phi/1.0.2> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -145,7 +145,7 @@
   rr:predicateObjectMap [
     rr:predicate dcterms:modified ;
     rr:objectMap [ 
-      rr:constant "2026-02-03" ;
+      rr:constant "2026-03-10" ;
       rr:datatype xsd:date
     ]
   ] ;
@@ -219,7 +219,7 @@
   rr:predicateObjectMap [
     rr:predicate owl:priorVersion ;
     rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology/blob/main/index.prior-ver.html> ;
+      rr:constant <https://w3id.org/hse/ontology/phi/1.0.1> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -243,15 +243,99 @@
   ] .
 
 # DatatypeProperty Mapping
-<#DatatypePropertiesMapping>
+<#PHIDatatypePropertiesMapping>
   rml:logicalSource [
-    rml:source "datatype_properties.csv" ;
+    rml:source "phi_datatype_properties.csv" ;
     rml:referenceFormulation ql:CSV
   ] ;
 
   rr:subjectMap [
     rml:reference "URI" ;
     rr:termType rr:IRI ;
+    rr:class owl:DatatypeProperty
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "Label" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rml:reference "Comment" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:subPropertyOf ;
+    rr:objectMap [ 
+      rml:reference "SubPropertyOf" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:domain ;
+    rr:objectMap [ 
+      rml:reference "Domain" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:range ;
+    rr:objectMap [ 
+      rml:reference "Range" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:source ;
+    rr:objectMap [ rml:reference "Source" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:creator ;
+    rr:objectMap [ rml:reference "Creator" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:contributor ;
+    rr:objectMap [ rml:reference "Contributor" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:created ;
+    rr:objectMap [ 
+      rml:reference "Created" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:modified ;
+    rr:objectMap [ 
+      rml:reference "Modified" ;
+      rr:datatype xsd:date
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ 
+      rml:reference "SeeAlso" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+<#PHDDatatypePropertiesMapping>
+  rml:logicalSource [
+    rml:source "phd_datatype_properties.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://w3id.org/hse/ontology/phd#{ID}" ;
     rr:class owl:DatatypeProperty
   ] ;
 
@@ -336,8 +420,7 @@
   ] ;
 
   rr:subjectMap [
-    rml:reference "https://w3id.org/hse/ontology/phi#{URI}" ;
-    rr:termType rr:IRI ;
+    rr:template "https://w3id.org/hse/ontology/phi#{ID}" ;
     rr:class owl:ObjectProperty
   ] ;
 
@@ -421,8 +504,7 @@
   ] ;
 
   rr:subjectMap [
-    rml:reference "https://w3id.org/hse/ontology/phd#{URI}" ;
-    rr:termType rr:IRI ;
+    rr:template "https://w3id.org/hse/ontology/phd#{ID}" ;
     rr:class owl:ObjectProperty
   ] ;
 

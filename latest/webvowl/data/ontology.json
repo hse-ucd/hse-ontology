@@ -1,0 +1,1527 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "https://w3id.org/hse/terminology", "https://w3id.org/hse/ontology/phd", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/dcat", "https://www.w3.org/TR/vocab-dcat-3/", "https://w3id.org/hse/ontology/phi", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "undefined" : "Population Health Indicator Ontology"
+    },
+    "iri" : "https://w3id.org/hse/ontology/phi#",
+    "version" : "1.0.2",
+    "description" : {
+      "undefined" : "Ontology for modeling population health indicators based on health DCAT-AP data catalogue"
+    },
+    "labels" : {
+      "undefined" : "Population Health Indicator Ontology"
+    },
+    "comments" : {
+      "undefined" : "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project."
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/hse/ontology/phi/1.0.1",
+        "type" : "iri"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.2",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Population Health Indicator Ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://openreview.net/pdf?id=JMWarUh56o",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Haula Galadima, ADAPT UCD",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huan Chen, UCD",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Junli Liang, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "phi",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD). This work is licensed under a Creative Commons Attribution 4.0 International License.",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-03-10",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "ADAPT Centre, University College Dublin",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Rob Brennan, Junli Liang and Akila Wickramasekara, , Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/hse/ontology/phi#",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2025-08-20",
+        "type" : "label"
+      } ],
+      "status" : [ {
+        "identifier" : "status",
+        "language" : "undefined",
+        "value" : "Draft",
+        "type" : "label"
+      } ],
+      "homepage" : [ {
+        "identifier" : "homepage",
+        "language" : "undefined",
+        "value" : "https://github.com/hse-ucd/hse-ontology",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset",
+    "baseIri" : "https://www.w3.org/TR/vocab-dcat-3/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Class:Dataset"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#Indicator",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "instances" : 0,
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Indicator",
+      "undefined" : "Indicator"
+    },
+    "comment" : {
+      "undefined" : "A population health indicator that measures specific aspects of health and wellbeing."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Resource",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "5" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "18"
+  }, {
+    "instances" : 0,
+    "union" : [ "3", "20" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "12",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#Dataset",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "instances" : 0,
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huan Chen, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-04-25",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-09-11",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "DCAT3",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Dataset",
+      "undefined" : "Dataset"
+    },
+    "comment" : {
+      "undefined" : "Collection of data published or curated by a single agent and available for access or download in one or more serializations or formats"
+    },
+    "id" : "7",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#IndicatorGroup",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "instances" : 0,
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Junli Liang, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-02-03",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-02-03",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IndicatorGroup",
+      "undefined" : "Indicator Group"
+    },
+    "comment" : {
+      "undefined" : "A grouping of related health profile indicators."
+    },
+    "id" : "38"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://w3id.org/hse/terminology#StatusCode",
+    "baseIri" : "https://w3id.org/hse/terminology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StatusCode"
+    },
+    "attributes" : [ "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/hse/ontology/phi#rationale",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "2",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "rationale",
+      "undefined" : "Rationale"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#denominatorSource",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "5",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "denominatorSource",
+      "undefined" : "Denominator Source Dataset"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Identifier, e.g. URL, for the dataset providing a denominator data element. If there are multiple denominator data elements then multiple datasets must be provided as a list."
+    },
+    "attributes" : [ "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#indicatorType",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "3",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "indicatorType",
+      "undefined" : "Indicator Type"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Specifies if the indicator has both a numerator and a denominator, is coverage, accumulated or qualitative type"
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#methodology",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "10",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "methodology",
+      "undefined" : "Methodology"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Summary of methods used to calculate the indicator (e.,g statistical technique, smoothing, standardisation, modelling)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://purl.org/dc/terms/accrualPeriodicity",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "accrualPeriodicity"
+    },
+    "domain" : "12",
+    "subproperty" : [ "13" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#otherIdentifier",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "16",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "otherIdentifier",
+      "undefined" : "Other Identifiers"
+    },
+    "superproperty" : [ "17" ],
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Alternative identifiers for this indicator from other data publishers or coding schemes (as URIs)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "range" : "6",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#validityGuidance",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "25",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "validityGuidance",
+      "undefined" : "Validity Guidance"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Description of how the indicator might be influenced by other variables or biases, affecting validity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#denominatorDataElement",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "27",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "denominatorDataElement",
+      "undefined" : "Denominator Data Element"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#sameAs",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "sameAs"
+    },
+    "domain" : "12",
+    "subproperty" : [ "15" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#status",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "19",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huan Chen, UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-04-25",
+        "type" : "label"
+      }, {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-09-11",
+        "type" : "label"
+      }, {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "PHI",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/hse/ontology/phi#StatusCodes",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "status",
+      "undefined" : "Status"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "An internal prioritisation process status for the dataset or indicator"
+    },
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#numeratorDataElement",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "32",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "numeratorDataElement",
+      "undefined" : "Numerator Data Element"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phd#applicableLegislation",
+    "baseIri" : "https://w3id.org/hse/ontology/phd",
+    "range" : "14",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huan Chen, UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-04-25",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-09-11",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "DCAT3",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "applicableLegislation",
+      "undefined" : "Applicable Legislation"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "The legislation that mandates the creation or management of the Dataset."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phd#status",
+    "baseIri" : "https://w3id.org/hse/ontology/phd",
+    "range" : "35",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huan Chen, UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-04-25",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-09-11",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "PHD",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "status",
+      "undefined" : "Status"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "An internal prioritisation process status for the dataset or indicator"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#disaggregation",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "29",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "disaggregation",
+      "undefined" : "Disaggregations"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "A list of disaggregation conditions that should be available e.g. male and female"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#measurementLimitations",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "31",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "measurementLimitations",
+      "undefined" : "Measurement Limitations"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Notes on limitations or uncertainty introduced by how the data are collected or calculated."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phd#hasCodingScheme",
+    "baseIri" : "https://w3id.org/hse/ontology/phd",
+    "range" : "34",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Huan Chen, UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-04-25",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-09-11",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "DCAT3",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasCodingScheme",
+      "undefined" : "Has Coding Scheme"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#subdomain",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "3",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://healthdataportal.eu/ns/health#healthTheme",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "subdomain",
+      "undefined" : "Subdomain"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "A more specific category under the domain (e.g. Population numbers)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#accrualPeriodicity",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "3",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "accrualPeriodicity",
+      "undefined" : "Report Frequency"
+    },
+    "superproperty" : [ "11" ],
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Frequency of indicator update in report, e.g. daily or monthly. This is used with the reporting style to determine the exact frequency and lag of indicator reports.Note that datasets have their own -Frequency of data updates- field to state how often they are updated."
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#highLowGuidance",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "30",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "highLowGuidance",
+      "undefined" : "High-Low Guidance"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Guidance on how to understand high or low values—whether they suggest good or poor outcomes."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#domain",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "3",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://healthdataportal.eu/ns/health#healthTheme",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "domain",
+      "undefined" : "Domain"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The high-level category the indicator falls under (e.g. Demography)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#memberOfGroup",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "38",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-03-01",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-03-01",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "memberOfGroup",
+      "undefined" : "Member of Indicator Group"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Indicates that this indicator is a member of an indicator group."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phi#numeratorSource",
+    "baseIri" : "https://w3id.org/hse/ontology/phi",
+    "range" : "5",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-08-18",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-08-29",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "OAHP Data Catalogue Schema Proposal v05.13",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "numeratorSource",
+      "undefined" : "Numerator Source Dataset"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Identifier, e.g. URL, for the dataset providing a numerator data element. If there are multiple numerator data elements then multiple datasets must be provided as a list."
+    },
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/hse/ontology/phd#spatialAggregation",
+    "baseIri" : "https://w3id.org/hse/ontology/phd",
+    "range" : "22",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://w3id.org/hse/terminology#SpatialGranularityCode",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "PHD",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "Rob Brennan, ADAPT UCD",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "Junli Liang, UCD",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#Dataset",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/hse/2025-04-25",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "spatialAggregation",
+      "undefined" : " Spatial Aggregation"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : " \"List the smallest spatial aggregatation size available in the dataset"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "47"
+  } ]
+}

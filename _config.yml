@@ -15,11 +15,26 @@ exclude:
 
 # Include the ontology documentation directory
 include:
-  - ontology_v101
+  - v0.1
+  - v1.0.0
+  - v1.0.1
+  - v1.0.2
 
 # Don't process ontology files
 defaults:
   - scope:
-      path: "ontology_v101"
+      path: "v0.1"
+    values:
+      sitemap: false
+  - scope:
+      path: "v1.0.0"
+    values:
+      sitemap: false
+  - scope:
+      path: "v1.0.1"
+    values:
+      sitemap: false
+  - scope:
+      path: "v1.0.2"
     values:
       sitemap: false
