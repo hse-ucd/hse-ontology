@@ -15,6 +15,30 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+:ontology a owl:Ontology;
+  dcterms:abstract "The Population Health Profile Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)";
+  dcterms:bibliographicCitation "Rob Brennan, Junli Liang and Akila Wickramasekara, , Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf";
+  dcterms:contributor "Haula Galadima, ADAPT UCD", "Huan Chen, UCD", "Junli Liang, ADAPT UCD",
+    "Rob Brennan, ADAPT UCD";
+  dcterms:description "Ontology for modeling population health indicators based on health DCAT-AP data catalogue";
+  dcterms:issued "2025-08-20"^^xsd:date;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:modified "2026-03-10"^^xsd:date;
+  dcterms:publisher "ADAPT Centre, University College Dublin";
+  dcterms:rights "Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD). This work is licensed under a Creative Commons Attribution 4.0 International License.";
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  dcterms:title "Population Health Profile Ontology";
+  bibo:status "Draft";
+  vann:preferredNamespacePrefix "phi";
+  vann:preferredNamespaceUri "https://w3id.org/hse/ontology/phi#";
+  rdfs:comment "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project.";
+  rdfs:label "Population Health Profile Ontology";
+  rdfs:seeAlso <https://openreview.net/pdf?id=JMWarUh56o>;
+  owl:priorVersion <https://w3id.org/hse/ontology/1.0.1>;
+  owl:versionIRI <https://w3id.org/hse/ontology/1.0.2>;
+  owl:versionInfo "1.0.2";
+  foaf:homepage <https://github.com/hse-ucd/hse-ontology> .
+
 phd:applicableLegislation a owl:ObjectProperty;
   dcterms:contributor "Huan Chen, UCD";
   dcterms:created "2025-04-25"^^xsd:date;
@@ -58,30 +82,6 @@ phd:status a owl:DatatypeProperty;
   rdfs:label "Status";
   rdfs:range xsd:string;
   rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status> .
-
-<https://w3id.org/hse/ontology/phi#> a owl:Ontology;
-  dcterms:abstract "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)";
-  dcterms:bibliographicCitation "Rob Brennan, Junli Liang and Akila Wickramasekara, , Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf";
-  dcterms:contributor "Haula Galadima, ADAPT UCD", "Huan Chen, UCD", "Junli Liang, ADAPT UCD",
-    "Rob Brennan, ADAPT UCD";
-  dcterms:description "Ontology for modeling population health indicators based on health DCAT-AP data catalogue";
-  dcterms:issued "2025-08-20"^^xsd:date;
-  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
-  dcterms:modified "2026-03-10"^^xsd:date;
-  dcterms:publisher "ADAPT Centre, University College Dublin";
-  dcterms:rights "Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD). This work is licensed under a Creative Commons Attribution 4.0 International License.";
-  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
-  dcterms:title "Population Health Indicator Ontology";
-  bibo:status "Draft";
-  vann:preferredNamespacePrefix "phi";
-  vann:preferredNamespaceUri "https://w3id.org/hse/ontology/phi#";
-  rdfs:comment "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project.";
-  rdfs:label "Population Health Indicator Ontology";
-  rdfs:seeAlso <https://openreview.net/pdf?id=JMWarUh56o>;
-  owl:priorVersion <https://w3id.org/hse/ontology/phi/1.0.1>;
-  owl:versionIRI <https://w3id.org/hse/ontology/phi/1.0.2>;
-  owl:versionInfo "1.0.2";
-  foaf:homepage <https://github.com/hse-ucd/hse-ontology> .
 
 phi:Dataset a rdfs:Class;
   dcterms:contributor "Huan Chen, ADAPT UCD";

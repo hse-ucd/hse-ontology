@@ -97,13 +97,13 @@
   ] ;
 
   rr:subjectMap [
-    rr:constant <https://w3id.org/hse/ontology/phi#> ;
+    rr:constant <https://w3id.org/hse/ontology> ;
     rr:class owl:Ontology
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rr:constant "Population Health Indicator Ontology" ]
+    rr:objectMap [ rr:constant "Population Health Profile Ontology" ]
   ] ;
 
   rr:predicateObjectMap [
@@ -113,7 +113,7 @@
 
   rr:predicateObjectMap [
     rr:predicate dcterms:title ;
-    rr:objectMap [ rr:constant "Population Health Indicator Ontology" ]
+    rr:objectMap [ rr:constant "Population Health Profile Ontology" ]
   ] ;
 
   rr:predicateObjectMap [
@@ -129,7 +129,7 @@
   rr:predicateObjectMap [
     rr:predicate owl:versionIRI ;
     rr:objectMap [ 
-      rr:constant <https://w3id.org/hse/ontology/phi/1.0.2> ;
+      rr:constant <https://w3id.org/hse/ontology/1.0.2> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -137,7 +137,7 @@
   rr:predicateObjectMap [
     rr:predicate owl:priorVersion ;
     rr:objectMap [ 
-      rr:constant <https://w3id.org/hse/ontology/phi/1.0.1> ;
+      rr:constant <https://w3id.org/hse/ontology/1.0.1> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -206,7 +206,7 @@
 
   rr:predicateObjectMap [
     rr:predicate dcterms:abstract ;
-    rr:objectMap [ rr:constant "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)" ]
+    rr:objectMap [ rr:constant "The Population Health Profile Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)" ]
   ] ;
 
   rr:predicateObjectMap [
