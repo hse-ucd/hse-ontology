@@ -129,7 +129,7 @@
   rr:predicateObjectMap [
     rr:predicate owl:versionIRI ;
     rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology/blob/main/phi-ontology.ttl> ;
+      rr:constant <https://w3id.org/hse/ontology/phi/1.0.1> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -219,7 +219,7 @@
   rr:predicateObjectMap [
     rr:predicate owl:priorVersion ;
     rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology/blob/main/index.prior-ver.html> ;
+      rr:constant <https://w3id.org/hse/ontology/phi/1.0.0> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -232,7 +232,7 @@
   rr:predicateObjectMap [
     rr:predicate foaf:homepage ;
     rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology> ;
+      rr:constant <https://w3id.org/hse/ontology/phi/1.0.1> ;
       rr:termType rr:IRI
     ]
   ] ;
