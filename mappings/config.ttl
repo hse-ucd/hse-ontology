@@ -172,7 +172,7 @@
 
   rr:predicateObjectMap [
     rr:predicate dcterms:source ;
-    rr:objectMap [ rr:constant "OAHP Data Catalogue Schema Proposal v05.13" ]
+    rr:objectMap [ rr:constant "The OAHP project" ]
   ] ;
 
   rr:predicateObjectMap [
