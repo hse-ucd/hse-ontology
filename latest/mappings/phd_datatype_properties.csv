@@ -1,4 +1,0 @@
-ID,Label,Comment,SubPropertyOf,Domain,Range,Source,Creator,Contributor,Created,Modified,SeeAlso
-status,Status,An internal prioritisation process status for the dataset or indicator,,http://www.w3.org/ns/dcat#Dataset,http://www.w3.org/2001/XMLSchema#string,PHD,"Rob Brennan, ADAPT UCD","Huan Chen, UCD",2025-04-25,2025-09-11,https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status
-hasCodingScheme,Has Coding Scheme,"Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)",,http://www.w3.org/ns/dcat#Dataset,http://www.w3.org/2001/XMLSchema#string,DCAT3,"Rob Brennan, ADAPT UCD","Huan Chen, UCD",2025-04-25,2025-09-11,
-spatialAggregation, Spatial Aggregation, "List the smallest spatial aggregatation size available in the dataset, e.g. NUTS2, National or Health Region",,http://www.w3.org/ns/dcat#Dataset,https://w3id.org/hse/terminology#SpatialGranularityCode,PHD,"Rob Brennan, ADAPT UCD","Junli Liang, UCD",2025-04-25,2026-03-10,
