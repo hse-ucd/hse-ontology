@@ -123,13 +123,21 @@
 
   rr:predicateObjectMap [
     rr:predicate owl:versionInfo ;
-    rr:objectMap [ rr:constant "1.0.1" ]
+    rr:objectMap [ rr:constant "1.0.3" ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate owl:versionIRI ;
     rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology/blob/main/phi-ontology.ttl> ;
+      rr:constant <https://w3id.org/hse/ontology/1.0.3/> ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate owl:priorVersion ;
+    rr:objectMap [ 
+      rr:constant <https://w3id.org/hse/ontology/1.0.2/> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -145,9 +153,14 @@
   rr:predicateObjectMap [
     rr:predicate dcterms:modified ;
     rr:objectMap [ 
-      rr:constant "2026-02-03" ;
+      rr:constant "2026-04-07" ;
       rr:datatype xsd:date
     ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:creator ;
+    rr:objectMap [ rr:constant "Rob Brennan, ADAPT UCD" ]
   ] ;
 
   rr:predicateObjectMap [
@@ -166,13 +179,11 @@
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate dcterms:contributor ;
-    rr:objectMap [ rr:constant "Rob Brennan, ADAPT UCD" ]
-  ] ;
-
-  rr:predicateObjectMap [
     rr:predicate dcterms:source ;
-    rr:objectMap [ rr:constant "The OAHP project" ]
+    rr:objectMap [ 
+      rr:constant "The OAHP project" ;
+      rr:termType rr:Literal
+    ]
   ] ;
 
   rr:predicateObjectMap [
@@ -213,16 +224,9 @@
 
   rr:predicateObjectMap [
     rr:predicate vann:preferredNamespaceUri ;
-    rr:objectMap [ rr:constant "https://w3id.org/hse/ontology/phi#" ]
+    rr:objectMap [ rr:constant "https://w3id.org/hse/ontology/" ]
   ] ;
 
-  rr:predicateObjectMap [
-    rr:predicate owl:priorVersion ;
-    rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology/blob/main/index.prior-ver.html> ;
-      rr:termType rr:IRI
-    ]
-  ] ;
 
   rr:predicateObjectMap [
     rr:predicate bibo:status ;
@@ -232,15 +236,18 @@
   rr:predicateObjectMap [
     rr:predicate foaf:homepage ;
     rr:objectMap [ 
-      rr:constant <https://github.com/hse-ucd/hse-ontology> ;
+      rr:constant <https://w3id.org/hse/ontology/> ;
       rr:termType rr:IRI
     ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate dcterms:bibliographicCitation ;
-    rr:objectMap [ rr:constant "Rob Brennan, Junli Liang and Akila Wickramasekara, , Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf" ]
-  ] .
+    rr:objectMap [ 
+      rr:constant "Rob Brennan, Junli Liang and Akila Wickramasekara, Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf; Mohamed Chouaiech, Pascal Derycke, Bert Van Nuffelen, Nuno Miguel Soares Mesquita, Pavlina Fragkou, Charles-Andrew Vande Catsyne, Truls Korsgaard, Hans Aage Huru, and Makx Dekkers, HealthDCAT-AP Release 5 22 September 2025, Available at https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-5/"
+    ]
+  ]
+  .
 
 # DatatypeProperty Mapping
 <#DatatypePropertiesMapping>
