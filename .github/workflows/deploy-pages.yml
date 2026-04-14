@@ -29,6 +29,7 @@ jobs:
 
       - name: Add cache-busting timestamp
         run: |
+          mkdir -p ./latest
           echo "Deployment timestamp: $(date)" > ./latest/DEPLOY_INFO.txt
           echo "Commit: ${{ github.sha }}" >> ./latest/DEPLOY_INFO.txt
 
