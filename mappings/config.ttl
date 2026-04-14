@@ -123,13 +123,13 @@
 
   rr:predicateObjectMap [
     rr:predicate owl:versionInfo ;
-    rr:objectMap [ rr:constant "1.0.3" ]
+    rr:objectMap [ rr:constant "1.0.4" ]
   ] ;
 
   rr:predicateObjectMap [
     rr:predicate owl:versionIRI ;
     rr:objectMap [ 
-      rr:constant <https://w3id.org/hse/ontology/1.0.3/> ;
+      rr:constant <https://w3id.org/hse/ontology/1.0.4/> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -137,7 +137,7 @@
   rr:predicateObjectMap [
     rr:predicate owl:priorVersion ;
     rr:objectMap [ 
-      rr:constant <https://w3id.org/hse/ontology/1.0.2/> ;
+      rr:constant <https://w3id.org/hse/ontology/1.0.3/> ;
       rr:termType rr:IRI
     ]
   ] ;
@@ -153,7 +153,7 @@
   rr:predicateObjectMap [
     rr:predicate dcterms:modified ;
     rr:objectMap [ 
-      rr:constant "2026-04-07" ;
+      rr:constant "2026-04-14" ;
       rr:datatype xsd:date
     ]
   ] ;
@@ -209,8 +209,9 @@
 
   rr:predicateObjectMap [
     rr:predicate dcterms:abstract ;
-    rr:objectMap [ rr:constant "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, their definitions, data sources, methodologies, and quality attributes. Developed as part of the Older Adult Health and Wellbeing Profile project. Funded by Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024)" ]
-  ] ;
+    rr:objectMap [ rr:constant """The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, indicator groups and the data sources that are used for the indicator numerators and denominators. It is based on HealthDCAT-AP Release 5, the Data Privacy Vocabulary (DPV) and a review of international digital population health indicator metadata. Specific influences were NHS Fingertips,THL Sotkanet Indicator Bank and HSE population health indicator metadata. It is designed to enable the cataloguing and feasibility assessment of indicators and supporting datasets for a population health profile process.
+
+This ontology was developed by the Research Ireland ADAPT Centre at UCD as part of the Ageing Well in Later Life Profile project under Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024). This research was conducted with the financial support of Research Ireland under the ADAPT Centre for AI-driven Digital Content Technology which is funded under the Research Ireland Research Centres Programme (Grant 13/RC/2106_P2) and EMPOWER Data Governance under the Research Ireland Spokes Programme (Grant 20/SP/8955).""" ] ] ;
 
   rr:predicateObjectMap [
     rr:predicate dcterms:publisher ;
@@ -244,8 +245,7 @@
   rr:predicateObjectMap [
     rr:predicate dcterms:bibliographicCitation ;
     rr:objectMap [ 
-      rr:constant "Rob Brennan, Junli Liang and Akila Wickramasekara, Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf; Mohamed Chouaiech, Pascal Derycke, Bert Van Nuffelen, Nuno Miguel Soares Mesquita, Pavlina Fragkou, Charles-Andrew Vande Catsyne, Truls Korsgaard, Hans Aage Huru, and Makx Dekkers, HealthDCAT-AP Release 5 22 September 2025, Available at https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-5/"
-    ]
+      rr:constant """Rob Brennan, Junli Liang and Akila Wickramasekara, Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf """ ;]
   ]
   .
 

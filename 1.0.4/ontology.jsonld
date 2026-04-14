@@ -1,0 +1,723 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/provenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#historyNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phd#hasCodingScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Huan Chen, UCD"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-04-25"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-09-11"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "DCAT3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Has Coding Scheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phd#status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Huan Chen, UCD"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-04-25"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-09-11"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "PHD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An internal prioritisation process status for the dataset or indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, indicator groups and the data sources that are used for the indicator numerators and denominators. It is based on HealthDCAT-AP Release 5, the Data Privacy Vocabulary (DPV) and a review of international digital population health indicator metadata. Specific influences were NHS Fingertips,THL Sotkanet Indicator Bank and HSE population health indicator metadata. It is designed to enable the cataloguing and feasibility assessment of indicators and supporting datasets for a population health profile process.\n\nThis ontology was developed by the Research Ireland ADAPT Centre at UCD as part of the Ageing Well in Later Life Profile project under Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024). This research was conducted with the financial support of Research Ireland under the ADAPT Centre for AI-driven Digital Content Technology which is funded under the Research Ireland Research Centres Programme (Grant 13/RC/2106_P2) and EMPOWER Data Governance under the Research Ireland Spokes Programme (Grant 20/SP/8955)."
+  } ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Rob Brennan, Junli Liang and Akila Wickramasekara, Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf "
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Haula Galadima, ADAPT UCD"
+  }, {
+    "@value" : "Huan Chen, UCD"
+  }, {
+    "@value" : "Junli Liang, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Ontology for modeling population health indicators based on health DCAT-AP data catalogue"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-20"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-04-14"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "ADAPT Centre, University College Dublin"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@value" : "Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD). This work is licensed under a Creative Commons Attribution 4.0 International License."
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "The OAHP project"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Population Health Indicator Ontology"
+  } ],
+  "http://purl.org/ontology/bibo/status" : [ {
+    "@value" : "Draft"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "phi"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/hse/ontology/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Population Health Indicator Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://openreview.net/pdf?id=JMWarUh56o"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://w3id.org/hse/ontology/1.0.3/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/hse/ontology/1.0.4/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.4"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://w3id.org/hse/ontology/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Huan Chen, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-04-25"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-09-11"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "DCAT3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Collection of data published or curated by a single agent and available for access or download in one or more serializations or formats"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#Indicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A population health indicator that measures specific aspects of health and wellbeing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indicator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#IndicatorGroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-02-03"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-02-03"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A grouping of related health profile indicators."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indicator Group"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Technical description of the indicator—what it measures, how it's defined, and any assumptions or limitations in interpretation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Definition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#denominatorDataElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Denominator Data Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#disaggregation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A list of disaggregation conditions that should be available e.g. male and female"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disaggregations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#highLowGuidance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Guidance on how to understand high or low values—whether they suggest good or poor outcomes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "High-Low Guidance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#historyNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reasons for Inclusion or Exclusion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Reasons for Inclusion/Exclusion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#historyNote"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indicator ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/identifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#measurementLimitations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Notes on limitations or uncertainty introduced by how the data are collected or calculated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Measurement Limitations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#methodology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Summary of methods used to calculate the indicator (e.,g statistical technique, smoothing, standardisation, modelling)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Methodology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#note",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Any additional informal information about the dataset or indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Notes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#note"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#numeratorDataElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Numerator Data Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#provenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Provenance is information about entities, activities, and people involved in producing an indicator, which can be used to form assessments about its quality, reliability or trustworthiness. For example a description of the source of this indicator, e.g. academic papers or standards, any calculations or adjustments performed on the raw data and any organisations involved in producing or transforming the data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Provenance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/provenance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#rationale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rationale"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Full name of the indicator as used in reports or dashboards."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indicator Title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/title"
+  } ]
+}, {
+  "@id" : "https://w3id.org/hse/ontology/phi#validityGuidance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Rob Brennan, ADAPT UCD"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-08-29"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "OAHP Data Catalogue Schema Proposal v05.13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Description of how the indicator might be influenced by other variables or biases, affecting validity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/hse/ontology/phi#Indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Validity Guidance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]

@@ -1,0 +1,239 @@
+@prefix : <https://w3id.org/hse/ontology/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix phd: <https://w3id.org/hse/ontology/phd#> .
+@prefix phi: <https://w3id.org/hse/ontology/phi#> .
+@prefix pht: <https://w3id.org/hse/terminology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+phd:hasCodingScheme a owl:DatatypeProperty;
+  dcterms:contributor "Huan Chen, UCD";
+  dcterms:created "2025-04-25"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-09-11"^^xsd:date;
+  dcterms:source "DCAT3";
+  rdfs:comment "Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)";
+  rdfs:domain dcat:Dataset;
+  rdfs:label "Has Coding Scheme";
+  rdfs:range xsd:string .
+
+phd:status a owl:DatatypeProperty;
+  dcterms:contributor "Huan Chen, UCD";
+  dcterms:created "2025-04-25"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-09-11"^^xsd:date;
+  dcterms:source "PHD";
+  rdfs:comment "An internal prioritisation process status for the dataset or indicator";
+  rdfs:domain dcat:Dataset;
+  rdfs:label "Status";
+  rdfs:range xsd:string;
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Property:resource_status> .
+
+<https://w3id.org/hse/ontology/phi#> a owl:Ontology;
+  dcterms:abstract """The Population Health Indicator Ontology (phi) provides a formal vocabulary for describing population health indicators, indicator groups and the data sources that are used for the indicator numerators and denominators. It is based on HealthDCAT-AP Release 5, the Data Privacy Vocabulary (DPV) and a review of international digital population health indicator metadata. Specific influences were NHS Fingertips,THL Sotkanet Indicator Bank and HSE population health indicator metadata. It is designed to enable the cataloguing and feasibility assessment of indicators and supporting datasets for a population health profile process.
+
+This ontology was developed by the Research Ireland ADAPT Centre at UCD as part of the Ageing Well in Later Life Profile project under Health Service Executive National Clinical Programme for Older People Research Award 2024 (NCPOP RA3/2024). This research was conducted with the financial support of Research Ireland under the ADAPT Centre for AI-driven Digital Content Technology which is funded under the Research Ireland Research Centres Programme (Grant 13/RC/2106_P2) and EMPOWER Data Governance under the Research Ireland Spokes Programme (Grant 20/SP/8955).""";
+  dcterms:bibliographicCitation "Rob Brennan, Junli Liang and Akila Wickramasekara, Prototyping a Health DCAT-AP data catalogue to support population health indicator identification and quality assessment, NeXt-generation Data Governance workshop 2025 (NXDG 2025), https://ceur-ws.org/Vol-4064/NXDG25-paper3.pdf ";
+  dcterms:contributor "Haula Galadima, ADAPT UCD", "Huan Chen, UCD", "Junli Liang, ADAPT UCD";
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:description "Ontology for modeling population health indicators based on health DCAT-AP data catalogue";
+  dcterms:issued "2025-08-20"^^xsd:date;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+  dcterms:modified "2026-04-14"^^xsd:date;
+  dcterms:publisher "ADAPT Centre, University College Dublin";
+  dcterms:rights "Copyright © 2025 Health Service Executive (HSE) and University College Dublin (UCD). This work is licensed under a Creative Commons Attribution 4.0 International License.";
+  dcterms:source "The OAHP project";
+  dcterms:title "Population Health Indicator Ontology";
+  bibo:status "Draft";
+  vann:preferredNamespacePrefix "phi";
+  vann:preferredNamespaceUri "https://w3id.org/hse/ontology/";
+  rdfs:comment "An ontology for describing population health indicators, created during the Older Adult Health and Wellbeing Profile project.";
+  rdfs:label "Population Health Indicator Ontology";
+  rdfs:seeAlso <https://openreview.net/pdf?id=JMWarUh56o>;
+  owl:priorVersion <https://w3id.org/hse/ontology/1.0.3/>;
+  owl:versionIRI <https://w3id.org/hse/ontology/1.0.4/>;
+  owl:versionInfo "1.0.4";
+  foaf:homepage <https://w3id.org/hse/ontology/> .
+
+phi:Dataset a rdfs:Class;
+  dcterms:contributor "Huan Chen, ADAPT UCD";
+  dcterms:created "2025-04-25"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-09-11"^^xsd:date;
+  dcterms:source "DCAT3";
+  rdfs:comment "Collection of data published or curated by a single agent and available for access or download in one or more serializations or formats";
+  rdfs:label "Dataset";
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset>;
+  rdfs:subClassOf <https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset> .
+
+phi:Indicator a rdfs:Class;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "A population health indicator that measures specific aspects of health and wellbeing.";
+  rdfs:label "Indicator" .
+
+phi:IndicatorGroup a rdfs:Class;
+  dcterms:contributor "Junli Liang, ADAPT UCD";
+  dcterms:created "2026-02-03"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2026-02-03"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "A grouping of related health profile indicators.";
+  rdfs:label "Indicator Group" .
+
+phi:definition a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Technical description of the indicator—what it measures, how it's defined, and any assumptions or limitations in interpretation.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Definition";
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf skos:definition .
+
+phi:denominatorDataElement a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "The description of one variable or value that is used in the denominator (if this indicator has one) e.g. population size. Multiple data elements may be present as a list.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Denominator Data Element";
+  rdfs:range xsd:string .
+
+phi:disaggregation a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "A list of disaggregation conditions that should be available e.g. male and female";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Disaggregations";
+  rdfs:range xsd:string .
+
+phi:highLowGuidance a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Guidance on how to understand high or low values—whether they suggest good or poor outcomes.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "High-Low Guidance";
+  rdfs:range xsd:string .
+
+phi:historyNote a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Reasons for Inclusion or Exclusion";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Reasons for Inclusion/Exclusion";
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf skos:historyNote .
+
+phi:identifier a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "The main identifier for the Indicator, e.g. the URI [URL, web link] or other unique identifier in the context of the Catalogue.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Indicator ID";
+  rdfs:range xsd:anyURI;
+  rdfs:subPropertyOf dcterms:identifier .
+
+phi:measurementLimitations a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Notes on limitations or uncertainty introduced by how the data are collected or calculated.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Measurement Limitations";
+  rdfs:range xsd:string .
+
+phi:methodology a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Summary of methods used to calculate the indicator (e.,g statistical technique, smoothing, standardisation, modelling).";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Methodology";
+  rdfs:range xsd:string .
+
+phi:note a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Any additional informal information about the dataset or indicator";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Notes";
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf skos:note .
+
+phi:numeratorDataElement a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "The description of one variable or value that is used in the numerator e.g. number of deaths. Multiple data elements may be present as a list.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Numerator Data Element";
+  rdfs:range xsd:string .
+
+phi:provenance a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Provenance is information about entities, activities, and people involved in producing an indicator, which can be used to form assessments about its quality, reliability or trustworthiness. For example a description of the source of this indicator, e.g. academic papers or standards, any calculations or adjustments performed on the raw data and any organisations involved in producing or transforming the data.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Provenance";
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf dcterms:provenance .
+
+phi:rationale a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "A summary explaining why this indicator matters—its relevance to population health, what it helps to understand, and how it complements other indicators.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Rationale";
+  rdfs:range xsd:string .
+
+phi:title a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Full name of the indicator as used in reports or dashboards.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Indicator Title";
+  rdfs:range xsd:string;
+  rdfs:subPropertyOf dcterms:title .
+
+phi:validityGuidance a owl:DatatypeProperty;
+  dcterms:created "2025-08-18"^^xsd:date;
+  dcterms:creator "Rob Brennan, ADAPT UCD";
+  dcterms:modified "2025-08-29"^^xsd:date;
+  dcterms:source "OAHP Data Catalogue Schema Proposal v05.13";
+  rdfs:comment "Description of how the indicator might be influenced by other variables or biases, affecting validity.";
+  rdfs:domain phi:Indicator;
+  rdfs:label "Validity Guidance";
+  rdfs:range xsd:string .
